@@ -41,10 +41,10 @@
   <header id="header" class="header dark-background d-flex flex-column">
     <i class="header-toggle d-xl-none bi bi-list"></i>
 
-    <!-- เพิ่มส่วนควบคุมเสียงตรงนี้ -->
+    <!-- แก้ไขส่วนควบคุมเสียงตรงนี้ -->
     <div id="audio-controls" class="position-fixed top-0 end-0 m-3">
       <button id="toggleAudio" class="btn btn-sm btn-light"><i class="bi bi-volume-up"></i></button>
-      <input type="range" id="volumeSlider" min="0" max="1" step="0.1" value="0.5" class="form-range ms-2" style="width: 100px;">
+      <input type="range" id="volumeSlider" min="0" max="100" step="1" value="50" class="form-range ms-2" style="width: 100px;">
     </div>
 
     <div class="profile-img">
@@ -840,7 +840,7 @@
     Your browser does not support the audio element.
   </audio>
 
-  <!-- เพิ่ม script สำหรับควบคุมเสียงตรงนี้ -->
+  <!-- แก้ไข script สำหรับควบคุมเสียงตรงนี้ -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       const audio = document.getElementById('backgroundMusic');
@@ -858,8 +858,11 @@
       });
 
       volumeSlider.addEventListener('input', function() {
-        audio.volume = this.value;
+        audio.volume = this.value / 100; // แปลงค่าจาก 0-100 เป็น 0-1
       });
+
+      // ตั้งค่าเริ่มต้นของระดับเสียง
+      audio.volume = volumeSlider.value / 100;
     });
   </script>
 
