@@ -41,6 +41,12 @@
   <header id="header" class="header dark-background d-flex flex-column">
     <i class="header-toggle d-xl-none bi bi-list"></i>
 
+    <!-- เพิ่มส่วนควบคุมเสียงตรงนี้ -->
+    <div id="audio-controls" class="position-fixed top-0 end-0 m-3">
+      <button id="toggleAudio" class="btn btn-sm btn-light"><i class="bi bi-volume-up"></i></button>
+      <input type="range" id="volumeSlider" min="0" max="1" step="0.1" value="0.5" class="form-range ms-2" style="width: 100px;">
+    </div>
+
     <div class="profile-img">
       <img src="assets/img/my-profile-img.jpg" alt="" class="img-fluid rounded-circle" style="width: auto; height: auto; max-width: 300px; max-height: 200px;">
     </div>
@@ -742,7 +748,7 @@
                 </div>
               </div><!-- End Info Item -->
 
-              <iframe src="https://www.google.com/maps?q=%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%A7%E0%B8%B4%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%A5%E0%B8%B1%E0%B8%A2%E0%B9%80%E0%B8%8A%E0%B8%B5%E0%B8%A2%E0%B8%87%E0%B9%83%E0%B8%AB%E0%B8%A1%E0%B9%88&sca_esv=c768f71cdf49a14c&sca_upv=1&rlz=1C1GCEA_enTH1108TH1108&sxsrf=ADLYWIJrmbtm40gch42jyWalvHu9PkiwFQ:1727427381573&gs_lp=Egxnd3Mtd2l6LXNlcnAiCeC4oeC4q-C4sioCCAAyCBAuGIAEGLEDMgoQABiABBhDGIoFMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQLhiABDILEAAYgAQYsQMYgwEyBRAuGIAEMggQLhiABBixAzILEAAYgAQYsQMYgwEyFxAuGIAEGLEDGJcFGNwEGN4EGOAE2AEBSO0VULYJWMIOcAJ4AZABAJgBlwSgAZEGqgEHMC4yLjUtMbgBA8gBAPgBAZgCBaACqgbCAgoQABiwAxjWBBhHwgINEAAYgAQYsAMYQxiKBcICChAuGIAEGCcYigXCAgoQIxiABBgnGIoFwgILEC4YgAQYxwEYrwHCAg4QLhiABBixAxiDARiKBcICFxAuGIAEGIoFGJcFGNwEGN4EGOAE2AEBmAMAiAYBkAYKugYGCAEQARgUkgcHMi4yLjQtMaAHzz8&um=1&ie=UTF-8&ved=1t:200713&ictx=111" frameborder="0" style="border:0; width: 100%; height: 270px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <iframe src="https://www.google.com/maps?q=%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%A7%E0%B8%B4%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%A5%E0%B8%B1%E0%B8%A2%E0%B9%80%E0%B8%8A%E0%B8%B5%E0%B8%A2%E0%B8%87%E0%B9%83%E0%B8%AB%E0%B8%A1%E0%B9%88&sca_esv=c768f71cdf49a14c&sca_upv=1&rlz=1C1GCEA_enTH1108TH1108&sxsrf=ADLYWIJrmbtm40gch42jyWalvHu9PkiwFQ:1727427381573&gs_lp=Egxnd3Mtd2l6LXNlcnAiCeC4oeC4q-C4sioCCAAyCBAuGIAEGLEDMgoQABiABBhDGIoFMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQLhiABDILEAAYgAQYsQMYgwEyBRAuGIAEMggQLhiABBixAzILEAAYgAQYsQMYgwEyFxAuGIAEGLEDGJcFGNwEGN4EGOAE2AEBSO0VULYJWMIOcAJ4AZABAJgBlwSgAZEGqgEHMC4yLjUtMbgBA8gBAPgBAZgCBaACqgbCAgoQABiwAxjWBBhHwgINEAAYgAQYsAMYQxiKBcICChAuGIAEGCcYigXCAgoQIxiABBgnGIoFwgILEC4YgAQYxwEYrwHCAg4QLhiABBixAxiDARiKBcICFxAuGIAEGIoFGJcFGNwEGN4EGOAE2AEBmAMAiAYBkAYKugYGCAEQARgUkgcHMi4yLjUtMbg&um=1&ie=UTF-8&ved=1t:200713&ictx=111" frameborder="0" style="border:0; width: 100%; height: 270px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
           </div>
 
@@ -827,6 +833,35 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- เพิ่ม audio element ตรงนี้ -->
+  <audio id="backgroundMusic" loop>
+    <source src="assets/audio/BG-music.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- เพิ่ม script สำหรับควบคุมเสียงตรงนี้ -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const audio = document.getElementById('backgroundMusic');
+      const toggleButton = document.getElementById('toggleAudio');
+      const volumeSlider = document.getElementById('volumeSlider');
+
+      toggleButton.addEventListener('click', function() {
+        if (audio.paused) {
+          audio.play();
+          toggleButton.innerHTML = '<i class="bi bi-volume-up"></i>';
+        } else {
+          audio.pause();
+          toggleButton.innerHTML = '<i class="bi bi-volume-mute"></i>';
+        }
+      });
+
+      volumeSlider.addEventListener('input', function() {
+        audio.volume = this.value;
+      });
+    });
+  </script>
 
 </body>
 
