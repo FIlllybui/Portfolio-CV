@@ -1272,6 +1272,10 @@ section,
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+  background-color: #df2ebc;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
 }
 
 .bubble-container {

@@ -44,7 +44,7 @@
     <!-- แก้ไขส่วนควบคุมเสียงตรงนี้ -->
     <div id="audio-controls" class="position-fixed top-0 end-0 m-3">
       <button id="toggleAudio" class="btn btn-sm btn-light"><i class="bi bi-volume-up"></i></button>
-      <input type="range" id="volumeSlider" min="0" max="100" step="1" value="30" class="form-range ms-2" style="width: 100px;">
+      <input type="range" id="volumeSlider" min="0" max="100" step="1" value="20" class="form-range ms-2" style="width: 100px;">
     </div>
 
     <div class="profile-img">
@@ -855,15 +855,7 @@
         toggleButton.innerHTML = '<i class="bi bi-play"></i>'; // เปลี่ยนไอคอนเป็นปุ่มเล่น
       });
 
-      toggleButton.addEventListener('click', function() {
-        if (audio.paused) {
-          audio.play();
-          toggleButton.innerHTML = '<i class="bi bi-volume-up"></i>';
-        } else {
-          audio.pause();
-          toggleButton.innerHTML = '<i class="bi bi-volume-mute"></i>';
-        }
-      });
+      
 
       volumeSlider.addEventListener('input', function() {
         audio.volume = this.value / 100; // แปลงค่าจาก 0-100 เป็น 0-1
