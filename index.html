@@ -855,7 +855,15 @@
         toggleButton.innerHTML = '<i class="bi bi-play"></i>'; // เปลี่ยนไอคอนเป็นปุ่มเล่น
       });
 
-      
+      toggleButton.addEventListener('click', function() {
+        if (audio.paused) {
+          audio.play();
+          toggleButton.innerHTML = '<i class="bi bi-volume-up"></i>';
+        } else {
+          audio.pause();
+          toggleButton.innerHTML = '<i class="bi bi-volume-mute"></i>';
+        }
+      });
 
       volumeSlider.addEventListener('input', function() {
         audio.volume = this.value / 100; // แปลงค่าจาก 0-100 เป็น 0-1
