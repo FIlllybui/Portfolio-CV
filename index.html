@@ -34,6 +34,37 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+
+  <!-- เพิ่ม CSS สำหรับพื้นหลังดอกซากุระ -->
+  <style>
+    .sakura-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+    }
+    
+    .petal {
+      position: absolute;
+      background-color: #ffc0cb;
+      border-radius: 150% 0 150% 0;
+      animation: falling linear infinite;
+    }
+    
+    @keyframes falling {
+      0% {
+        top: -10%;
+        transform: rotate(0deg);
+      }
+      100% {
+        top: 100%;
+        transform: rotate(360deg);
+      }
+    }
+  </style>
 </head>
 
 <body class="index-page">
@@ -44,7 +75,7 @@
     <!-- แก้ไขส่วนควบคุมเสียงตรงนี้ -->
     <div id="audio-controls" class="position-fixed top-0 end-0 m-3">
       <button id="toggleAudio" class="btn btn-sm btn-light"><i class="bi bi-volume-up"></i></button>
-      <input type="range" id="volumeSlider" min="0" max="100" step="1" value="20" class="form-range ms-2" style="width: 100px;">
+      <input type="range" id="volumeSlider" min="0" max="100" step="1" value="1" class="form-range ms-2" style="width: 100px;">
     </div>
 
     <div class="profile-img">
@@ -728,7 +759,7 @@
                 <i class="bi bi-geo-alt flex-shrink-0"></i>
                 <div>
                   <h3>Address</h3>
-                  <p>555/1 ต.หนองหาร อ.สันทราย จ.เชียงใหม่ 50290</p>
+                  <p>555/1 ต.หนองหาร อ.สั���ทราย จ.เชียงใหม่ 50290</p>
                 </div>
               </div><!-- End Info Item -->
 
@@ -872,6 +903,30 @@
       // ตั้งค่าเริ่มต้นของระดับเสียง
       audio.volume = volumeSlider.value / 100;
     });
+  </script>
+
+  <!-- เพิ่มพื้นหลังดอกซากุระ -->
+  <div class="sakura-background" id="sakuraBackground"></div>
+
+  <!-- เพิ่ม JavaScript สำหรับสร้างดอกซากุระ -->
+  <script>
+    function createPetal() {
+      const petal = document.createElement('div');
+      petal.classList.add('petal');
+      petal.style.left = Math.random() * 100 + '%';
+      petal.style.width = Math.random() * 15 + 5 + 'px';
+      petal.style.height = petal.style.width;
+      petal.style.animationDuration = Math.random() * 5 + 5 + 's';
+      petal.style.opacity = Math.random() * 0.5 + 0.5;
+      
+      document.getElementById('sakuraBackground').appendChild(petal);
+      
+      setTimeout(() => {
+        petal.remove();
+      }, 10000);
+    }
+    
+    setInterval(createPetal, 300);
   </script>
 
 </body>
