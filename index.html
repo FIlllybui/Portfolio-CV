@@ -35,9 +35,13 @@
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
 
-  <!-- เพิ่ม CSS สำหรับพื้นหลังดอกซากุระ -->
+  <!-- เพิ่ม CSS สำหรับพื้นหลังสีชมพูและภาพเคลื่อนไหว -->
   <style>
-    .sakura-background {
+    body {
+      background-color: #FFB6C1; /* สีชมพูอ่อน */
+    }
+    
+    .moving-background {
       position: fixed;
       top: 0;
       left: 0;
@@ -47,27 +51,23 @@
       z-index: -1;
     }
     
-    .petal {
+    .circle {
       position: absolute;
-      background-color: #ffc0cb;
-      border-radius: 150% 0 150% 0;
-      animation: falling linear infinite;
+      background-color: rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      animation: float 8s infinite ease-in-out;
     }
     
-    @keyframes falling {
-      0% {
-        top: -10%;
-        transform: rotate(0deg);
-      }
-      100% {
-        top: 100%;
-        transform: rotate(360deg);
-      }
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-20px) rotate(180deg); }
     }
   </style>
 </head>
 
 <body class="index-page">
+  <!-- เพิ่มพื้นหลังเคลื่อนไหว -->
+  <div class="moving-background" id="movingBackground"></div>
 
   <header id="header" class="header dark-background d-flex flex-column">
     <i class="header-toggle d-xl-none bi bi-list"></i>
