@@ -532,8 +532,8 @@ h6 {
 --------------------------------------------------------------*/
 section,
 .section {
-  color: var(--default-color);
-  background-color: var(--background-color);
+  color: var(--accent-color);
+  background-color: var(--sakura-background);
   padding: 60px 0;
   overflow: clip;
 }
@@ -1303,7 +1303,7 @@ section,
 .starter-section {
   /* Add your styles here */
   background-color: #df2ebc;
-  color: #fff;
+  color: #efb5b5;
   padding: 20px;
   text-align: center;
 }
