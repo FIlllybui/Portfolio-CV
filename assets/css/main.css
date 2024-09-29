@@ -29,12 +29,12 @@
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #a8a9b4;  /* The default color of the main navmenu links */
-  --nav-hover-color: #ffffff; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #040b14; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #040b14; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #a8a9b4; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #ffffff; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-color: #ffffff;  /* เปลี่ยนสีข้อความในเมนูเป็นสีขาว */
+  --nav-hover-color: #a8a9b4; /* เปลี่ยนสีเมื่อ hover เป็นสีอ่อนลง */
+  --nav-mobile-background-color: #000080; /* เปลี่ยนเป็นสีน้ำเงินเข้ม */
+  --nav-dropdown-background-color: #000080; /* เปลี่ยนเป็นสีน้ำเงินเข้ม */
+  --nav-dropdown-color: #ffffff; /* เปลี่ยนสีข้อความใน dropdown เป็นสีขาว */
+  --nav-dropdown-hover-color: #a8a9b4; /* เปลี่ยนสี hover ใน dropdown */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -174,7 +174,7 @@ h6 {
 --------------------------------------------------------------*/
 .header {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background-color: #000080; /* เปลี่ยนพื้นหลังของ header เป็นสีน้ำเงินเข้ม */
   position: fixed;
   top: 0;
   left: 0;
@@ -184,7 +184,7 @@ h6 {
   transition: all ease-in-out 0.3s;
   overflow-y: auto;
   z-index: 997;
-  border-right: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-right: 1px solid rgba(255, 255, 255, 0.1); /* เปลี่ยนสีเส้นขอบให้เห็นชัดขึ้น */
 }
 
 .header .profile-img img {
@@ -340,6 +340,7 @@ h6 {
 .navmenu .active,
 .navmenu .active:focus {
   color: var(--nav-hover-color);
+  background-color: rgba(255, 255, 255, 0.1); /* เพิ่มพื้นหลังเมื่อ hover */
 }
 
 .navmenu a:hover .navicon,
