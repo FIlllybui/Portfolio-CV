@@ -34,6 +34,31 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  <style>
+  .sakura-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    overflow: hidden;
+  }
+  
+  .petal {
+    position: absolute;
+    background-color: #FFB7C5;
+    border-radius: 150% 0 150% 0;
+    animation: falling linear infinite;
+  }
+  
+  @keyframes falling {
+    0% { transform: translateY(-10%) rotate(0deg); }
+    100% { transform: translateY(100vh) rotate(720deg); }
+  }
+  </style>
+
 </head>
 
 <body class="portfolio-details-page">
@@ -216,6 +241,87 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+ <!-- เพิ่ม audio element ตรงนี้ -->
+ <audio id="backgroundMusic" loop>
+  <source src="assets/audio/BG-music.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<!-- แก้ไข script สำหรับควบคุมเสียงตรงนี้ -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const audio = document.getElementById('backgroundMusic');
+    const toggleButton = document.getElementById('toggleAudio');
+    const volumeSlider = document.getElementById('volumeSlider');
+
+    // พยายามเล่นเพลงอัตโนมัติ
+    audio.play().then(() => {
+      console.log('เล่นเพลงอัตโนมัติสำเร็จ');
+    }).catch((error) => {
+      console.log('ไม่สามารถเล่นเพลงอัตโนมัติได้:', error);
+      toggleButton.innerHTML = '<i class="bi bi-play"></i>'; // เปลี่ยนไอคอนเป็นปุ่มเล่น
+    });
+
+    toggleButton.addEventListener('click', function() {
+      if (audio.paused) {
+        audio.play();
+        toggleButton.innerHTML = '<i class="bi bi-volume-up"></i>';
+      } else {
+        audio.pause();
+        toggleButton.innerHTML = '<i class="bi bi-volume-mute"></i>';
+      }
+    });
+
+    volumeSlider.addEventListener('input', function() {
+      audio.volume = this.value / 100; // แปลงค่าจาก 0-100 เป็น 0-1
+    });
+
+    // ตั้งค่าเริ่มต้นของระดับเสียง
+    audio.volume = volumeSlider.value / 100;
+  });
+</script>
+<section id="portfolio" class="portfolio section" style="background-color: #FFB6C1;"></section>
+<!-- เพิ่มพื้นหลังดอกซากุระ -->
+<div class="sakura-background" id="sakuraBackground"></div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const heading = document.querySelector('h2');
+    heading.classList.add('fade-in');
+  });
+</script>
+
+<!-- เพิ่ม JavaScript สำหรับสร้างดอกซากุระ -->
+<script>
+  function createPetal() {
+    const petal = document.createElement('div');
+    petal.classList.add('petal');
+    petal.style.left = Math.random() * 100 + '%';
+    petal.style.width = Math.random() * 15 + 5 + 'px';
+    petal.style.height = petal.style.width;
+    petal.style.animationDuration = Math.random() * 5 + 5 + 's';
+    petal.style.opacity = Math.random() * 0.5 + 0.5;
+    
+    document.getElementById('sakuraBackground').appendChild(petal);
+    
+    setTimeout(() => {
+      petal.remove();
+    }, 10000);
+  }
+  
+  setInterval(createPetal, 300);
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const letters = document.querySelectorAll('.letter');
+  letters.forEach((letter, index) => {
+    letter.style.animationDelay = `${index * 0.1}s`; // เพิ่มการหน่วงเวลา
+    letter.classList.add('fade-in');
+  });
+});
+</script>
 
 </body>
 
