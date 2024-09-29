@@ -87,7 +87,6 @@
     
     .fade-in {
       opacity: 0;
-      transform: translateY(20px);
       animation: fadeIn 0.5s forwards;
     }
     
@@ -97,6 +96,32 @@
         transform: translateY(0);
       }
     }
+    
+    .letter {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 0.5s forwards;
+    }
+
+    .fade-in {
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+  }
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .letter {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.5s forwards;
+  }
   </style>
   
   <!-- เพิ่มฟอนต์ญี่ปุ่น -->
@@ -123,7 +148,26 @@
     <a href="index.html" class="logo d-flex align-items-center justify-content-center">
       <!-- Uncomment the line below if you also wish to use an image logo -->
       <!-- <img src="assets/img/logo.png" alt=""> -->
-      <h1 class="sitename stylesheet">Aphiwit Boonyakiat</h1>
+      <h1 class="sitename stylesheet">
+        <span class="letter">A</span>
+        <span class="letter">p</span>
+        <span class="letter">h</span>
+        <span class="letter">i</span>
+        <span class="letter">w</span>
+        <span class="letter">i</span>
+        <span class="letter">t</span>
+        <span class="letter"> </span>
+        <span class="letter">B</span>
+        <span class="letter">o</span>
+        <span class="letter">o</span>
+        <span class="letter">n</span>
+        <span class="letter">y</span>
+        <span class="letter">a</span>
+        <span class="letter">k</span>
+        <span class="letter">i</span>
+        <span class="letter">a</span>
+        <span class="letter">t</span>
+      </h1>
     </a>
 
     <div class="social-links text-center">
@@ -172,7 +216,26 @@
       <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in" class="moving-background">
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <h2>Aphiwit Boonyakiat</h2>
+        <h2>
+          <span class="letter">A</span>
+          <span class="letter">p</span>
+          <span class="letter">h</span>
+          <span class="letter">i</span>
+          <span class="letter">w</span>
+          <span class="letter">i</span>
+          <span class="letter">t</span>
+          <span class="letter"> </span>
+          <span class="letter">B</span>
+          <span class="letter">o</span>
+          <span class="letter">o</span>
+          <span class="letter">n</span>
+          <span class="letter">y</span>
+          <span class="letter">a</span>
+          <span class="letter">k</span>
+          <span class="letter">i</span>
+          <span class="letter">a</span>
+          <span class="letter">t</span>
+        </h2>
         <p style="color: black;">I'm <span class="typed" data-typed-items="Game Designer, Project Leader, Game Producer, Photographer">Designer</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
       </div>
 
@@ -862,6 +925,17 @@
     setInterval(createPetal, 300);
   </script>
 
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const letters = document.querySelectorAll('.letter');
+    letters.forEach((letter, index) => {
+      letter.style.animationDelay = `${index * 0.1}s`; // เพิ่มการหน่วงเวลา
+      letter.classList.add('fade-in');
+    });
+  });
+</script>
+
 </body>
 
+</html>
 </html>
