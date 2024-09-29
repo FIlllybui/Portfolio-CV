@@ -226,4 +226,20 @@
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 
+  // เพิ่มฟังก์ชันนี้ที่ส่วนบนของไฟล์
+  function playBackgroundMusic() {
+    const music = document.getElementById('backgroundMusic');
+    music.volume = 0.5; // ปรับระดับเสียงตามต้องการ (0.0 ถึง 1.0)
+    
+    // เล่นเพลงเมื่อผู้ใช้มีปฏิสัมพันธ์กับหน้าเว็บ
+    document.addEventListener('click', function() {
+      music.play().catch(function(error) {
+        console.log('การเล่นเพลงอัตโนมัติถูกปิดกั้น:', error);
+      });
+    }, { once: true });
+  }
+
+  // เรียกใช้ฟังก์ชันเมื่อหน้าเว็บโหลดเสร็จ
+  document.addEventListener('DOMContentLoaded', playBackgroundMusic);
+
 })();
