@@ -4,13 +4,13 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Index - iPortfolio Bootstrap Template</title>
+  <title>อภิวิชญ์ บุณยเกียรติ Portfolio</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="/assets/img/Pikachu.png" rel="icon">
+  <link href="/assets/img/Pikachu.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -122,6 +122,134 @@
     transform: translateY(20px);
     animation: fadeIn 0.5s forwards;
   }
+
+  /* สไตล์สำหรับ BigProject Section */
+  .bigproject .card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(39, 68, 173, 0.2);
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.95);
+  }
+
+  .bigproject .card-img-top {
+    border-bottom: 3px solid #2744ad;
+    height: 400px;
+    object-fit: cover;
+  }
+
+  .bigproject .card-body {
+    padding: 2rem;
+  }
+
+  .bigproject .card-title {
+    color: #2744ad;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-family: 'Noto Serif JP', serif;
+  }
+
+  .bigproject .card-text {
+    color: #444;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  .bigproject .fw-bold {
+    color: #2744ad;
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #2744ad;
+    display: inline-block;
+  }
+
+  .bigproject ul {
+    padding-left: 1.2rem;
+  }
+
+  .bigproject ul li {
+    margin-bottom: 0.5rem;
+    color: #555;
+  }
+
+  .bigproject .btn-primary {
+    background-color: #2744ad;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+  }
+
+  .bigproject .btn-primary:hover {
+    background-color: #1e3690;
+    transform: scale(1.05);
+  }
+
+  /* ปรับแต่งรายการในการ์ด */
+  .bigproject .list-unstyled li {
+    padding: 0.5rem 0;
+    border-bottom: 1px dashed rgba(39, 68, 173, 0.2);
+  }
+
+  .bigproject .list-unstyled li:last-child {
+    border-bottom: none;
+  }
+
+  .bigproject .list-unstyled strong {
+    color: #2744ad;
+    margin-right: 0.5rem;
+  }
+
+  /* สไตล์สำหรับ Portfolio Section */
+  .portfolio .portfolio-content {
+    position: relative;
+    overflow: hidden;
+    height: 300px; /* กำหนดความสูงคงที่ */
+  }
+
+  .portfolio .portfolio-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ทำให้รูปเต็มพื้นที่โดยไม่ผิดสัดส่วน */
+    transition: transform 0.3s ease;
+  }
+
+  .portfolio .portfolio-item {
+    margin-bottom: 30px;
+    height: 300px; /* กำหนดความสูงคงที่ */
+  }
+
+  .portfolio .portfolio-info {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 3;
+    transition: all 0.3s ease;
+  }
+
+  .portfolio .portfolio-content:hover .portfolio-info {
+    bottom: 0;
+  }
+
+  .portfolio .portfolio-info h4 {
+    font-size: 18px;
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+
+  .portfolio .portfolio-info p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    margin-bottom: 0;
+  }
   </style>
   
   <!-- เพิ่มฟอนต์ญี่ปุ่น -->
@@ -138,7 +266,7 @@
     <!-- แก้ไขส่วนควบคุมเสียงตรงนี้ -->
     <div id="audio-controls" class="position-fixed top-0 end-0 m-3">
       <button id="toggleAudio" class="btn btn-sm btn-light"><i class="bi bi-volume-up"></i></button>
-      <input type="range" id="volumeSlider" min="0" max="100" step="1" value="15" class="form-range ms-2" style="width: 100px;">
+      <input type="range" id="volumeSlider" min="0" max="100" step="1" value="0" class="form-range ms-2" style="width: 100px;">
     </div>
 
     <div class="profile-img">
@@ -168,6 +296,7 @@
         <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
         <li><a href="#skills"><i class="bi bi-play navicon"></i> Skills</a></li>
         <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
+        <li><a href="#bigproject"><i class="bi bi-briefcase navicon"></i> Big Project</a></li>
         <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
         <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
       </ul>
@@ -311,7 +440,7 @@
       <div class="container section-title" data-aos="fade-up">
         <h2>Skills</h2>
         <p>ฉันเชื่อว่าความสามารถของฉันยังสามารถพัฒนาได้มากยิ่งขึ้นอีก เเละฉันยังคงพยายามทำงานอย่างมีความกระตือรือร้นในการหาความรู้เพิ่มเติมเพื่อพัฒนาตนเองให้ดีขึ้น
-          ฉันมีความมั่นใจเรื่องความคิดสร้างสรรค์เเละการบริหารจัดการทีมเเละเคยเจอผู้คนมามากหน้าหลายตา
+          ฉันมีความมั่นใจเรื่องความคิดสร้างสรรค์เเละการบริหารจัดการทีมเเละเคยเจอผู้คนมากหน้าหลายตา
           ฉันสามารถพูดเเละทำงานได้ทั้งภาษาไทยเเละภาษาอังกฤษ เเละสามารถทำงานได้ทั้งภายในสถานที่เป็นการทำเกมส์ด้วย Unity เเละ Unreal Engine เเละการสร้างโปรเจคเกมส์บนมือถื
         </p>
       </div><!-- End Section Title -->
@@ -510,6 +639,67 @@
 
     </section><!-- /Resume Section -->
 
+    <!-- BigProject Section -->
+    <section id="bigproject" class="bigproject section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Big Project</h2>
+        <p>โปรเจกต์เกมที่ภูมิใจนำเสนอ</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+        <div class="row justify-content-center">
+
+          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+            <div class="card">
+              <img src="assets\img\portfolio\RedVeil\Big_main.png" class="card-img-top" alt="Project 1">
+              <div class="card-body">
+                <h5 class="card-title">RedVeil</h5>
+                <p class="card-text">เกม Soul-like Action RPG ที่พัฒนาด้วย Unity โดยรับบทเป็น Game Designer และ Project Manager ในการพัฒนาเกมนี้ได้รับแรงบันดาลใจมาจากเกม Dark Soul และ Elden Ring โดยเน้นการต่อสู้ที่ท้าทายและการใช้ภาพที่เเปลกใหม่</p>
+                
+                <div class="mt-4">
+                  <h6 class="fw-bold">รายละเอียดโปรเจกต์:</h6>
+                  <ul class="list-unstyled">
+                    <li><strong>ระยะเวลาพัฒนา:</strong> 6 เดือน</li>
+                    <li><strong>ขนาดทีม:</strong> 4 คน</li>
+                    <li><strong>บทบาท:</strong> Game Designer, Game Director,VFX Artist</li>
+                    <li><strong>เทคโนโลยี:</strong> Unity, C#</li>
+                    <li><strong>Platform:</strong> PC,Xbox</li>
+                  </ul>
+                </div>
+
+                <div class="mt-4">
+                  <h6 class="fw-bold">ความรับผิดชอบหลัก:</h6>
+                  <ul>
+                    <li>ออกแบบระบบการต่อสู้และกลไกการเล่น</li>
+                    <li>ออกเเบบ Level Design ของเกม</li>
+                    <li>สร้าง VFX ทั้งหมดของตัวเกม</li>
+                    <li>ออกเเบบ UX เเละ Userflow</li>
+                    <li>ควบคุมทิศทางการพัฒนาเกมตลอดการพัฒนา</li>
+                  </ul>
+                </div>
+
+                <div class="mt-4">
+                  <h6 class="fw-bold">เผยเเพร่:</h6>
+                  <ul>
+                    <li>ITCH.io</li>
+                    <li>Thai Game Connect บนบอร์ดเเสดงผลงาน</li>
+                  </ul>
+                </div>
+
+                <div class="text-center mt-4">
+                  <a href="portfolio-Redveil.html" class="btn btn-primary">ดูรายละเอียดเพิ่มเติม</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section><!-- /BigProject Section -->
+
     <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio section sakura-Background">
 
@@ -560,11 +750,11 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
               <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/or2.jpg" class="img-fluid" alt="">
+                <img src="assets/img/portfolio/or2-1.jpg" class="img-fluid" alt="">
                 <div class="portfolio-info">
                   <h4>Staff/Organizer 2</h4>
                   <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/or2.jpg" title="Staff/Organizer 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="assets/img/portfolio/or2-1.jpg" title="Staff/Organizer 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                   <a href="portfolio-or2.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
@@ -644,6 +834,18 @@
               </div>
             </div><!-- End Portfolio Item -->
 
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-Game">
+              <div class="portfolio-content h-100">
+                <img src="/assets/img/portfolio/RedVeil/Big_main.png" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>RedVeil</h4>
+                  <p>เกม PC Soul-like</p>
+                  <a href="/assets/img/portfolio/RedVeil/Big_main.png" title="RedVeil" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-Redveil.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
               <div class="portfolio-content h-100">
                 <img src="assets/img/portfolio/or3-1.jpg" class="img-fluid" alt="">
@@ -658,11 +860,47 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
               <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/figmar_f1.png" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>UX/UI</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/portfolio/figmar_f1.png" title="UX/UI 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-or3.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <div class="portfolio-content h-100">
                 <img src="assets/img/portfolio/art2-1.png" class="img-fluid" alt="">
                 <div class="portfolio-info">
                   <h4>Art Books&Design 3</h4>
                   <p>Lorem ipsum, dolor sit amet consectetur</p>
                   <a href="assets/img/portfolio/art2-1.png" title="Art-3" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-art2.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/fig_redveil.png" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Art Books&Design 3</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/portfolio/fig_redveil.png" title="Art-3" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-art2.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-Game">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/VR_1.png" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>VR Game</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/portfolio/VR_1.png" title="Art-3" data-gallery="portfolio-gallery-Game" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                   <a href="portfolio-art2.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
@@ -896,5 +1134,4 @@
 </script>
 </body>
 
-</html>
 </html>
