@@ -9,8 +9,8 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="assets/img/Pikachu.png" rel="icon">
+  <link href="assets/img/Pikachu.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -59,7 +59,7 @@
   }
   
   body {
-      background-image: url('assets/img/services.jpg'); /* แทนที่ด้วยที่อยู่จริงของรูปภาพของคุณ */
+      background-image: url('assets/img/portfolio/art-1.png'); /* แทนที่ด้วยที่อยู่จริงของรูปภาพของคุณ */
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
@@ -69,6 +69,61 @@
   .main {
     background-color: rgba(253, 191, 252, 0.7); /* เพิ่มพื้นหลังโปร่งใสให้กับเนื้อหาหลัก */
     padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .project-showcase {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .project-showcase .row {
+    align-items: center;
+  }
+
+  .project-showcase img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+
+  .project-showcase .project-details {
+    padding: 20px;
+  }
+
+  .project-showcase h3 {
+    color: #2744ad;
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  .project-showcase .feature-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .project-showcase .feature-list li {
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+  }
+
+  .project-showcase .feature-list li:before {
+    content: "•";
+    color: #2744ad;
+    font-size: 20px;
+    position: absolute;
+    left: 0;
+  }
+
+  .swiper-slide video {
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    object-fit: contain;
     border-radius: 10px;
   }
   </style>
@@ -146,19 +201,29 @@
                 {
                   "loop": true,
                   "speed": 600,
-                  "autoplay": {
-                    "delay": 5000
-                  },
                   "slidesPerView": "auto",
+                  "navigation": {
+                    "nextEl": ".swiper-button-next",
+                    "prevEl": ".swiper-button-prev"
+                  },
                   "pagination": {
                     "el": ".swiper-pagination",
                     "type": "bullets",
                     "clickable": true
-                  }
+                  },
+                  "grabCursor": true,
+                  "effect": "slide"
                 }
               </script>
 
               <div class="swiper-wrapper align-items-center">
+
+                <div class="swiper-slide">
+                  <video controls style="width: 100%; height: 100%;">
+                    <source src="/assets/img/portfolio/RedVeil/RedVeilTailer.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
 
                 <div class="swiper-slide">
                   <img src="/assets/img/portfolio/RedVeil/Big_main.png" alt="" style="max-width: auto; max-height: 1%;">
@@ -182,6 +247,8 @@
 
               </div>
               <div class="swiper-pagination"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
             </div>
           </div>
 
@@ -189,20 +256,20 @@
             <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
               <h3>Project information</h3>
               <ul>
-                <li><strong>Category</strong>: Sturdy</li>
-                <li><strong>Client</strong>: K-Camt</li>
-                <li><strong>Project date</strong>: 2024</li>
-                <li><strong>Project URL</strong>: <a href="#">https://www.facebook.com/photo?fbid=122106136976422139&set=pcb.122106137084422139</a></li>
+                <li><strong>Category</strong>: Game</li>
+                <li><strong>Client</strong>: GameProject</li>
+                <li><strong>Project date</strong>: 2025</li>
+                <li><strong>Project URL</strong>: <a href="#">https://filllybui.itch.io/redvile</a></li>
               </ul>
             </div>
             <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
-              <h2>เรียนเเลกเปลี่ยน ณ มหาวิทยาลัย Wonkwang</h2>
+              <h2>RedVeil</h2>
               <p>
-                โดยได้เรียนเรียนเเลกเปลี่ยนณ มหาวิทยาลัย Wonkwang ประเทศเกาหลี เป็นเวลา 1 เดือน โดยมีรายละเอียดการเรียนการสอนดังนี้
-                - ทดลองเรียนตามรายวิชาโปรเเกรมมิ่ง เเละ Production
-                - ทดลองการประกอบหุ่นเเละทดลองใช้เทคโนโลยีต่างๆ เช่น 3D Printing, Driving simulator
-                - ได้ทำความรู้จักกับนักศึกษาจากเกาหลี
-                - ได้ท่องเที่ยวใน seoul เเละเรียนรู้วัฒนธรรมต่างๆ ของเกาหลี
+                เกมเป็นเเนว Soul ผสม Rouge - Like 
+                โดยเป็นเกมที่คุมธีม midle fantasy โดยเกมจะเป็น
+                การคุมธีมในสี เเดงเเละดำให้เกมมีความเเปลกใหม่เเละเป็นเอกลักษณ์
+                ผู้เล่นจะต้องต่อสู้กับมอนสเตอร์ในเเต่ละด่านที่มีความท้าทาย โดยจะต้องเล่นให้ผ่าน 5 ด่านรวดหากตายต้องเริ่มใหม่ โดยที่หลังจบด่านจะสุ่มได้ความสามารถไม่เข้ามาเเละได้เเต่มมาอัป SkillTree โดย
+                จะปลดล็อกความสามารถต่างๆเช่น ปืน ดาบ ขวาน
               </p>
             </div>
           </div>
@@ -212,6 +279,149 @@
       </div>
 
     </section><!-- /Portfolio Details Section -->
+
+    <section class="project-showcase">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="portfolio-details-slider swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/RedVeil/Play_1.png" alt="Art Style 1" class="img-fluid">
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/RedVeil/Play_2.png" alt="Art Style 2" class="img-fluid">
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/RedVeil/Art_3.png" alt="Art Style 3" class="img-fluid">
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+          </div>
+          <div class="col-lg-8 project-details">
+            <h3>ระบบการเล่น (Gameplay)</h3>
+            <ul class="feature-list">
+              <li>ระบบการต่อสู้แบบ Souls-like ที่ท้าทายและลื่นไหลผู้เล่นต้องทดลองการเล่นหลายครั้งเพื่อผ่าน</li>
+              <li>ระบบ Skill Tree ที่ให้ผู้เล่นปลดล็อกความสามารถใหม่ๆตาม ดาวที่ได้จากด่านเเละสามารถปรับปรุงได้ตลอดเวลา</li>
+              <li>อาวุธหลากหลายรูปแบบ ทั้งดาบ ขวาน และปืนที่มี Mechanic การเล่นที่หลากหลายเพิ่มความหลากหลายในการเล่น</li>
+              <li>ระบบสุ่มความสามารถพิเศษหลังจบด่านที่จะเป็นตัวช่วยผู้เล่นเเละสร้างความเเปลกใหม่ทุกครั้งที่เล่น</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    </section><!-- /Portfolio Details Section -->
+
+    <section class="project-showcase">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="portfolio-details-slider swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/RedVeil/Art_1.png" alt="Art Style 1" class="img-fluid">
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/RedVeil/Art_2.png" alt="Art Style 2" class="img-fluid">
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/RedVeil/Art_3.png" alt="Art Style 3" class="img-fluid">
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+          </div>
+          <div class="col-lg-8 project-details">
+            <h3>ศิลปะและการออกแบบ (Art & Design)</h3>
+            <ul class="feature-list">
+              <li>สไตล์ภาพแบบ Middle Fantasy ผสมผสานโทนสีแดงและดำที่เป็นสีที่ดูโหดร้ายเเละรุนเเรง</li>
+              <li>การออกแบบตัวละครที่มีเอกลักษณ์ ที่เเต่ละตัวจะมีจุดเด่นเเละความสามารถเป็นของตัวเอง</li>
+              <li>เอฟเฟกต์การต่อสู้ที่น่าตื่นตาตื่นใจ</li>
+              <li>การออกแบบฉากที่มีบรรยากาศเฉพาะตัว</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-showcase">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="portfolio-details-slider swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/RedVeil/Key_1.png" alt="Art Style 1" class="img-fluid">
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/RedVeil/Key_2.png" alt="Art Style 2" class="img-fluid">
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/RedVeil/Key_2.png" alt="Art Style 3" class="img-fluid">
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+          </div>
+          <div class="col-lg-8 project-details">
+            <h3>คุณสมบัติเด่น (Key Features)</h3>
+            <ul class="feature-list">
+              <li>การเล่นผ่านหลายด่านติดต่อกันเพื่อเปิดไปยังชุด ด่านที่มีความท้าทายแตกต่างกันอื่นๆ</li>
+              <li>ระบบ Save ที่ให้ผู้เล่นสร้างได้หลายตัวละครเเละลองเล่นในเเบบที่ต่างออกไป</li>
+              <li>บอสไฟต์ที่น่าจดจำ เเละการต่อสู้ที่ยากลำบากในการผ่าน</li>
+              <li>ระบบการพัฒนาตัวละครที่หลากหลายเเละน่าค้นหา</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-showcase">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="portfolio-details-slider swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/RedVeil/Res_1.png" alt="Art Style 1" class="img-fluid">
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/RedVeil/Res_2.png " alt=Art Style 2" class="img-fluid">
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/RedVeil/Res_3.png" alt="Art Style 3" class="img-fluid">
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/RedVeil/Res_4.png" alt="Art Style 3" class="img-fluid">
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+          </div>
+          <div class="col-lg-8 project-details">
+            <h3>งานที่รับผิดชอบ (Resposive)</h3>
+            <ul class="feature-list">
+              <li>ออกแบบระบบการต่อสู้และกลไกการเล่นทั้งหมดของเกม</li>
+              <li>ออกเเบบ Ux/UI ของเกมในFigmaเเละส่งให้ArtวาดAsset</li>
+              <li>ทำBalanceของเกม ด้วย Balance Sheet</li>
+              <li>ควบคุมทิศทางการพัฒนาเกมตลอดการพัฒนา</li>
+              <li>เขียน GDD สำหรับเป็น Direction ในการพัฒนา</li>
+              <li>ทำVFXทั้งหมดที่มีในเกม เช่น ระเบิด บาเรีย ไฟ เป็นต้น</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
   </main>
 
@@ -226,7 +436,7 @@
         <!-- You can delete the links only if you've purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        Designed by Aphiwit Boonyakiat
       </div>
     </div>
 
@@ -330,6 +540,32 @@ document.addEventListener('DOMContentLoaded', function() {
   letters.forEach((letter, index) => {
     letter.style.animationDelay = `${index * 0.1}s`; // เพิ่มการหน่วงเวลา
     letter.classList.add('fade-in');
+  });
+});
+</script>
+
+<!-- เพิ่ม script ก่อน </body> -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Initialize all Swiper instances
+  const swipers = document.querySelectorAll('.portfolio-details-slider');
+  swipers.forEach(function(swiperElement) {
+    new Swiper(swiperElement, {
+      loop: true,
+      speed: 600,
+      slidesPerView: "auto",
+      navigation: {
+        nextEl: swiperElement.querySelector('.swiper-button-next'),
+        prevEl: swiperElement.querySelector('.swiper-button-prev')
+      },
+      pagination: {
+        el: swiperElement.querySelector('.swiper-pagination'),
+        type: "bullets",
+        clickable: true
+      },
+      grabCursor: true,
+      effect: "slide"
+    });
   });
 });
 </script>
