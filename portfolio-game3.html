@@ -59,7 +59,7 @@
   }
   
   body {
-      background-image: url('assets/img/services.jpg'); /* แทนที่ด้วยที่อยู่จริงของรูปภาพของคุณ */
+      background-image: url('assets/img/BackBack.jpg'); /* แทนที่ด้วยที่อยู่จริงของรูปภาพของคุณ */
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
@@ -70,6 +70,53 @@
     background-color: rgba(253, 191, 252, 0.7); /* เพิ่มพื้นหลังโปร่งใสให้กับเนื้อหาหลัก */
     padding: 20px;
     border-radius: 10px;
+  }
+
+  .project-showcase {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .project-showcase .row {
+    align-items: center;
+  }
+
+  .project-showcase img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+
+  .project-showcase .project-details {
+    padding: 20px;
+  }
+
+  .project-showcase h3 {
+    color: #2744ad;
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  .project-showcase .feature-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .project-showcase .feature-list li {
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+  }
+
+  .project-showcase .feature-list li:before {
+    content: "•";
+    color: #2744ad;
+    font-size: 20px;
+    position: absolute;
+    left: 0;
   }
   </style>
 
@@ -199,20 +246,18 @@
 
           <div class="col-lg-4">
             <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
-              <h3>Project information</h3>
+              <h3>Blackest Night</h3>
               <ul>
                 <li><strong>Category</strong>: Game Project</li>
-                <li><strong>Client</strong>: ASU Company</li>
+                <li><strong>Client</strong>: Chanom</li>
                 <li><strong>Project date</strong>: 01 March, 2020</li>
-                <li><strong>Project URL</strong>: <a href="#">https://www.canva.com/design/DAF23qthyr8/QTvg1TKbhwhPyfIlgYNpyg/edit?utm_content=DAF23qthyr8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton</a></li>
+                <li><strong>Project URL</strong>: <a href="https://www.canva.com/design/DAF23qthyr8/QTvg1TKbhwhPyfIlgYNpyg/edit?utm_content=DAF23qthyr8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">https://www.canva.com/design/DAF23qthyr8/QTvg1TKbhwhPyfIlgYNpyg/edit?utm_content=DAF23qthyr8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton</a></li>
               </ul>
             </div>
             <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
-              <h2>Game Jam 2023</h2>
+              <h2>Blackest Night</h2>
               <p>
-                สร้างเกม 2.5D บนมือถือโดยเป็นเกม Endless survier ที่ต้องเอาตัวรอดจากการต่อสู้กับสัตว์ร้ายต่างๆ ในหมู่บ้านที่ต้องการตัวตนของตัวเอง
-                ลิงค์ของเกม : https://cmu.to/9YhpI	
-                สามารถดาวโหลดเกมได้ที่ QR Code 
+                เป็นเกมที่พัฒนาในกลุ่มเพื่อนโดยมีความคิดที่อยากลองพัฒนาเกมลงบนโทรศัพท์มือถือ โดยฉันได้หน้าที่เป็น Game Designer ออกเเบบระบบทั้งหมดของตัวเกมเเละควบคุมBalanceของตัวเกมโดยเกมจะเป็นเเนว fantasy survival ที่จะมีช่วงเช้าเเละค่ำ เราจะต้องรวบรวม ทรัพยากรในช่วงเช้าเเละต่อสู้หรือหนีปีศาจในตอนกลางคืนเเละมีชีวิตรอดให้นานที่สุด
               </p>
             </div>
           </div>
@@ -221,13 +266,110 @@
         <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
           <h3>Game Tesser</h3>
         <div>
-          <video controls style="width: 50%; height: auto;">
-            <source src="assets/img/portfolio/game3-teaser.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
+          <div class="portfolio-details-slider swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <video controls class="img-fluid" style="width: 100%; height: auto;">
+                  <source src="assets/img/portfolio/game3-teaser.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+          </div>
       </div>
 
+      
+
     </section><!-- /Portfolio Details Section -->
+
+    <!-- Gameplay Section -->
+    <section class="project-showcase">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="portfolio-details-slider swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <video controls class="img-fluid" style="width: 100%; height: auto;">
+                    <source src="assets/img/portfolio/Game_3_V_1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8 project-details">
+            <h3>ระบบการเล่น (Gameplay)</h3>
+            <ul class="feature-list">
+              <li>ระบบการเก็บทรัพยากรในช่วงเวลากลางวัน</li>
+              <li>ระบบการต่อสู้กับมอนสเตอร์ในช่วงกลางคืน</li>
+              <li>ระบบ Crafting อาวุธและอุปกรณ์</li>
+              <li>ระบบ Day/Night Cycle ที่ส่งผลต่อ Gameplay</li>
+              <li><a href="https://drive.google.com/file/d/1Qo8aO-t7CwJ0pr_d7hfA95C0ux1RUyI7/view?usp=drive_link" target="_blank">https://drive.google.com/file/d/1Qo8aO-t7CwJ0pr_d7hfA95C0ux1RUyI7/view?usp=drive_link</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Art & Design Section -->
+    <section class="project-showcase">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="portfolio-details-slider swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <video controls class="img-fluid" style="width: 100%; height: auto;">
+                    <source src="assets/img/portfolio/Game_3_V_2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8 project-details">
+            <h3>ศิลปะและการออกแบบ (Art & Design)</h3>
+            <ul class="feature-list">
+              <li>กราฟิกแบบ 2D Pixel Art สไตล์ Fantasy</li>
+              <li>การออกแบบตัวละครที่มีเอกลักษณ์</li>
+              <li>แอนิเมชันการเคลื่อนไหวที่ลื่นไหล</li>
+              <li>การออกแบบ UI ที่ใช้งานง่ายบนมือถือ</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Responsibility Section -->
+    <section class="project-showcase">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="portfolio-details-slider swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <video controls class="img-fluid" style="width: 100%; height: auto;">
+                    <source src="assets/img/portfolio/Game_3_V_3.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8 project-details">
+            <h3>งานที่รับผิดชอบ (Responsibility)</h3>
+            <ul class="feature-list">
+              <li>ออกแบบระบบการเล่นและกลไกทั้งหมด</li>
+              <li>ทำ Game Balance และ Resource Management</li>
+              <li>ออกแบบระบบ Day/Night Cycle</li>
+              <li>ทดสอบหา FeedBack และปรับแต่งความยากของเกม</li>
+              <li>ทำEnvironmentของเกมทั้งหมดรวมถึงเเสง</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
   </main>
 
