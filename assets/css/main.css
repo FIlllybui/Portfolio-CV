@@ -1506,3 +1506,118 @@ section,
     transform: none;
   }
 }
+
+/*--------------------------------------------------------------
+# BigProject card collapse/expand
+--------------------------------------------------------------*/
+.bigproject .bigproject-cardbody {
+  cursor: pointer;
+  position: relative;
+}
+
+.bigproject .bigproject-cardbody.is-collapsed::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 56px;
+  z-index: 2;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.88) 55%,
+    rgba(255, 255, 255, 0.98) 100%
+  );
+}
+
+/* ลูกศรจางๆ บอกว่ากดขยายได้ */
+.bigproject .bigproject-expandhint {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%);
+  z-index: 3;
+  color: rgba(39, 68, 173, 0.55);
+  opacity: 0;
+  transition: opacity 180ms ease, transform 180ms ease;
+  pointer-events: none;
+}
+
+.bigproject .bigproject-cardbody.is-collapsed .bigproject-expandhint {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.bigproject .bigproject-cardbody.is-expanded .bigproject-expandhint {
+  opacity: 0;
+}
+
+.bigproject .bigproject-expandhint i {
+  font-size: 22px;
+  line-height: 1;
+  display: block;
+  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.08));
+}
+
+/* ทำให้เห็นว่า “มีต่อ” โดยลดความทึบเนื้อหาท้าย ๆ ตอนพับ */
+.bigproject .bigproject-cardbody.is-collapsed .bigproject-more {
+  opacity: 0.35;
+}
+
+.bigproject .bigproject-cardbody.is-expanded .bigproject-more {
+  opacity: 1;
+}
+
+.bigproject .bigproject-more {
+  transition: opacity 220ms ease;
+}
+
+/* ป้องกันไม่ให้ปุ่ม/ลิงก์ดูเหมือนคลิกทั้งการ์ด */
+.bigproject .bigproject-cardbody a,
+.bigproject .bigproject-cardbody button {
+  cursor: pointer;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bigproject .bigproject-cardbody {
+    transition: none !important;
+  }
+  .bigproject .bigproject-more {
+    transition: none;
+  }
+}
+
+/*--------------------------------------------------------------
+# Section scroll reveal (Zoom-in + Fade-in)
+--------------------------------------------------------------*/
+body.zoomfade-enabled section.section {
+  opacity: 1;
+  transform: none;
+}
+
+body.zoomfade-enabled section.section.is-inview {
+  animation: zoomfade-in 850ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  transform-origin: 50% 20%;
+  will-change: opacity, transform;
+}
+
+@keyframes zoomfade-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.zoomfade-enabled section.section {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
