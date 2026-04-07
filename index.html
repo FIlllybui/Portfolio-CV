@@ -123,86 +123,6 @@
     animation: fadeIn 0.5s forwards;
   }
 
-  /* สไตล์สำหรับ BigProject Section */
-  .bigproject .card {
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 0 30px rgba(39, 68, 173, 0.2);
-    overflow: hidden;
-    background: rgba(255, 255, 255, 0.95);
-  }
-
-  .bigproject .card-img-top {
-    border-bottom: 3px solid #2744ad;
-    height: 400px;
-    object-fit: cover;
-  }
-
-  .bigproject .card-body {
-    padding: 2rem;
-  }
-
-  .bigproject .card-title {
-    color: #2744ad;
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    font-family: 'Noto Serif JP', serif;
-  }
-
-  .bigproject .card-text {
-    color: #444;
-    font-size: 1.1rem;
-    line-height: 1.6;
-  }
-
-  .bigproject .fw-bold {
-    color: #2744ad;
-    font-size: 1.2rem;
-    margin-top: 1.5rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid #2744ad;
-    display: inline-block;
-  }
-
-  .bigproject ul {
-    padding-left: 1.2rem;
-  }
-
-  .bigproject ul li {
-    margin-bottom: 0.5rem;
-    color: #555;
-  }
-
-  .bigproject .btn-primary {
-    background-color: #2744ad;
-    border: none;
-    padding: 0.8rem 2rem;
-    font-size: 1.1rem;
-    border-radius: 30px;
-    transition: all 0.3s ease;
-  }
-
-  .bigproject .btn-primary:hover {
-    background-color: #1e3690;
-    transform: scale(1.05);
-  }
-
-  /* ปรับแต่งรายการในการ์ด */
-  .bigproject .list-unstyled li {
-    padding: 0.5rem 0;
-    border-bottom: 1px dashed rgba(39, 68, 173, 0.2);
-  }
-
-  .bigproject .list-unstyled li:last-child {
-    border-bottom: none;
-  }
-
-  .bigproject .list-unstyled strong {
-    color: #2744ad;
-    margin-right: 0.5rem;
-  }
-
   /* สไตล์สำหรับ Portfolio Section */
   .portfolio .portfolio-content {
     position: relative;
@@ -265,7 +185,7 @@
 
     <!-- แก้ไขส่วนควบคุมเสียงตรงนี้ -->
     <div id="audio-controls" class="position-fixed top-0 end-0 m-3">
-      <button id="toggleAudio" class="btn btn-sm btn-light"><i class="bi bi-volume-up"></i></button>
+      <button id="toggleAudio" class="btn btn-sm btn-light" aria-label="สลับเล่น/หยุดเพลง"><i class="bi bi-pause-fill" aria-hidden="true"></i></button>
       <input type="range" id="volumeSlider" min="0" max="100" step="1" value="3" class="form-range ms-2" style="width: 100px;">
     </div>
 
@@ -606,120 +526,126 @@
         <p>"Featured Game Projects"</p>
       </div><!-- End Section Title -->
 
-      <div class="container">
-        <div class="row justify-content-center">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="bigproject-carousel" data-bigproject-carousel>
+          <button type="button" class="bigproject-nav bigproject-nav--prev" aria-label="โปรเจกต์ก่อนหน้า" data-bigproject-prev>
+            <i class="bi bi-chevron-left" aria-hidden="true"></i>
+          </button>
 
-          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
-            <div class="card">
-              <img src="assets\img\portfolio\RedVeil\Big_main.png" class="card-img-top" alt="Project 1">
-              <div class="card-body">
-                <h5 class="card-title">RedVeil</h5>
-                <p class="card-text">Soul-like Action RPG – Developed using Unity, I took on the roles of Game Designer and Project Manager. This project was inspired by Dark Souls and Elden Ring, focusing on challenging combat mechanics and a unique visual presentation.</p>
-                
-                <div class="mt-4">
-                  <h6 class="fw-bold">รายละเอียดโปรเจกต์:</h6>
-                  <ul class="list-unstyled">
-                    <li><strong>ระยะเวลาพัฒนา:</strong> 6 เดือน</li>
-                    <li><strong>ขนาดทีม:</strong> 4 คน</li>
-                    <li><strong>บทบาท:</strong> Game Designer, Game Director,VFX Artist</li>
-                    <li><strong>เทคโนโลยี:</strong> Unity, C#</li>
-                    <li><strong>Platform:</strong> PC,Xbox</li>
-                  </ul>
-                </div>
+          <div class="bigproject-viewport" aria-live="polite">
+            <div class="bigproject-track" data-bigproject-track>
 
-                <div class="mt-4">
-                  <h6 class="fw-bold">ความรับผิดชอบหลัก:</h6>
-                  <ul>
-                    <li>ออกแบบระบบการต่อสู้และกลไกการเล่น</li>
-                    <li>ออกเเบบ Level Design ของเกม</li>
-                    <li>สร้าง VFX ทั้งหมดของตัวเกม</li>
-                    <li>ออกเเบบ UX เเละ Userflow</li>
-                    <li>ควบคุมทิศทางการพัฒนาเกมตลอดการพัฒนา</li>
-                  </ul>
-                </div>
+              <article class="bigproject-slide">
+                <div class="card">
+                  <img src="assets\img\portfolio\RedVeil\Big_main.png" class="card-img-top" alt="RedVeil">
+                  <div class="card-body">
+                    <h5 class="card-title">RedVeil</h5>
+                    <p class="card-text">Soul-like Action RPG – Developed using Unity, I took on the roles of Game Designer and Project Manager. This project was inspired by Dark Souls and Elden Ring, focusing on challenging combat mechanics and a unique visual presentation.</p>
 
-                <div class="mt-4">
-                  <h6 class="fw-bold">Game Design Document:</h6>
-                  <ul>
-                    <li>https://www.figma.com/board/26Y4eHzP7011xaehhqSA2x/Gamedev-3_1?node-id=123-125&t=3q8WEd909XIT8ujj-1</li>
-                  </ul>
-                </div>
+                    <div class="mt-4">
+                      <h6 class="fw-bold">รายละเอียดโปรเจกต์:</h6>
+                      <ul class="list-unstyled">
+                        <li><strong>ระยะเวลาพัฒนา:</strong> 6 เดือน</li>
+                        <li><strong>ขนาดทีม:</strong> 4 คน</li>
+                        <li><strong>บทบาท:</strong> Game Designer, Game Director,VFX Artist</li>
+                        <li><strong>เทคโนโลยี:</strong> Unity, C#</li>
+                        <li><strong>Platform:</strong> PC,Xbox</li>
+                      </ul>
+                    </div>
 
-                <div class="mt-4">
-                  <h6 class="fw-bold">เผยเเพร่:</h6>
-                  <ul>
-                    <li>ITCH.io</li>
-                    <li>Thai Game Connect บนบอร์ดเเสดงผลงาน</li>
-                  </ul>
-                </div>
+                    <div class="mt-4">
+                      <h6 class="fw-bold">ความรับผิดชอบหลัก:</h6>
+                      <ul>
+                        <li>ออกแบบระบบการต่อสู้และกลไกการเล่น</li>
+                        <li>ออกเเบบ Level Design ของเกม</li>
+                        <li>สร้าง VFX ทั้งหมดของตัวเกม</li>
+                        <li>ออกเเบบ UX เเละ Userflow</li>
+                        <li>ควบคุมทิศทางการพัฒนาเกมตลอดการพัฒนา</li>
+                      </ul>
+                    </div>
 
-                <div class="text-center mt-4">
-                  <a href="portfolio-Redveil.html" class="btn btn-primary">ดูรายละเอียดเพิ่มเติม</a>
+                    <div class="mt-4">
+                      <h6 class="fw-bold">Game Design Document:</h6>
+                      <ul>
+                        <li>https://www.figma.com/board/26Y4eHzP7011xaehhqSA2x/Gamedev-3_1?node-id=123-125&t=3q8WEd909XIT8ujj-1</li>
+                      </ul>
+                    </div>
+
+                    <div class="mt-4">
+                      <h6 class="fw-bold">เผยเเพร่:</h6>
+                      <ul>
+                        <li>ITCH.io</li>
+                        <li>Thai Game Connect บนบอร์ดเเสดงผลงาน</li>
+                      </ul>
+                    </div>
+
+                    <div class="text-center mt-4">
+                      <a href="portfolio-Redveil.html" class="btn btn-primary">ดูรายละเอียดเพิ่มเติม</a>
+                    </div>
+                  </div>
                 </div>
-              </div>
+              </article>
+
+              <article class="bigproject-slide">
+                <div class="card">
+                  <img src="/assets/img/portfolio/Game3-9.png" class="card-img-top" alt="Blackest Night">
+                  <div class="card-body">
+                    <h5 class="card-title">Blackest Night</h5>
+                    <p class="card-text">Fantasy Survival Mobile Game – Developed as a group project with friends, this game was designed for mobile platforms. I took on the role of Game Designer, responsible for designing the entire game system and balancing gameplay.
+                      The game features a day-night cycle, where players must gather resources during the day and fight or escape from demons at night, striving to survive as long as possible.
+
+                      </p>
+
+                    <div class="mt-4">
+                      <h6 class="fw-bold">รายละเอียดโปรเจกต์:</h6>
+                      <ul class="list-unstyled">
+                        <li><strong>ระยะเวลาพัฒนา:</strong> 6 เดือน</li>
+                        <li><strong>ขนาดทีม:</strong> 4 คน</li>
+                        <li><strong>บทบาท:</strong> Game Designer, Game Director,Environments Design</li>
+                        <li><strong>เทคโนโลยี:</strong> Unity, C#</li>
+                        <li><strong>Platform:</strong> Mobile</li>
+                      </ul>
+                    </div>
+
+                    <div class="mt-4">
+                      <h6 class="fw-bold">ความรับผิดชอบหลัก:</h6>
+                      <ul>
+                        <li>ออกแบบระบบการต่อสู้และกลไกการเล่น</li>
+                        <li>ออกเเบบ Level Design เเละ Balance ของเกม</li>
+                        <li>สร้างแผนที่ในเกมเเละEnviroment ด้วย Terrain</li>
+                        <li>ออกเเบบ UX เเละ Userflow</li>
+                        <li>ควบคุมทิศทางการพัฒนาเกมตลอดการพัฒนา</li>
+                      </ul>
+                    </div>
+
+                    <div class="mt-4">
+                      <h6 class="fw-bold">Game Design Document:</h6>
+                      <ul>
+                        <li>https://drive.google.com/file/d/1Qo8aO-t7CwJ0pr_d7hfA95C0ux1RUyI7/view</li>
+
+                      </ul>
+                    </div>
+
+                    <div class="mt-4">
+                      <h6 class="fw-bold">เผยเเพร่:</h6>
+                      <ul>
+                        <li>https://cmu.to/BlackestNIght</li>
+                      </ul>
+                    </div>
+
+                    <div class="text-center mt-4">
+                      <a href="portfolio-game3.html" class="btn btn-primary">ดูรายละเอียดเพิ่มเติม</a>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
             </div>
           </div>
 
-        </div>
-      </div>
-<br>
-      <div class="container">
-        <div class="row justify-content-center">
-
-          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
-            <div class="card">
-              <img src="/assets/img/portfolio/Game3-9.png" class="card-img-top" alt="Project 1">
-              <div class="card-body">
-                <h5 class="card-title">Blackest Night</h5>
-                <p class="card-text">Fantasy Survival Mobile Game – Developed as a group project with friends, this game was designed for mobile platforms. I took on the role of Game Designer, responsible for designing the entire game system and balancing gameplay.
-                  The game features a day-night cycle, where players must gather resources during the day and fight or escape from demons at night, striving to survive as long as possible.
-                  
-                  </p>
-                
-                <div class="mt-4">
-                  <h6 class="fw-bold">รายละเอียดโปรเจกต์:</h6>
-                  <ul class="list-unstyled">
-                    <li><strong>ระยะเวลาพัฒนา:</strong> 6 เดือน</li>
-                    <li><strong>ขนาดทีม:</strong> 4 คน</li>
-                    <li><strong>บทบาท:</strong> Game Designer, Game Director,Environments Design</li>
-                    <li><strong>เทคโนโลยี:</strong> Unity, C#</li>
-                    <li><strong>Platform:</strong> Mobile</li>
-                  </ul>
-                </div>
-
-                <div class="mt-4">
-                  <h6 class="fw-bold">ความรับผิดชอบหลัก:</h6>
-                  <ul>
-                    <li>ออกแบบระบบการต่อสู้และกลไกการเล่น</li>
-                    <li>ออกเเบบ Level Design เเละ Balance ของเกม</li>
-                    <li>สร้างแผนที่ในเกมเเละEnviroment ด้วย Terrain</li>
-                    <li>ออกเเบบ UX เเละ Userflow</li>
-                    <li>ควบคุมทิศทางการพัฒนาเกมตลอดการพัฒนา</li>
-                  </ul>
-                </div>
-
-                <div class="mt-4">
-                  <h6 class="fw-bold">Game Design Document:</h6>
-                  <ul>
-                    <li>https://drive.google.com/file/d/1Qo8aO-t7CwJ0pr_d7hfA95C0ux1RUyI7/view</li>
-                    
-                  </ul>
-                </div>
-
-                <div class="mt-4">
-                  <h6 class="fw-bold">เผยเเพร่:</h6>
-                  <ul>
-                    <li >https://cmu.to/BlackestNIght </li>           
-                  </ul>
-                </div>
-
-                <div class="text-center mt-4">
-                  <a href="portfolio-game3.html" class="btn btn-primary">ดูรายละเอียดเพิ่มเติม</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
+          <button type="button" class="bigproject-nav bigproject-nav--next" aria-label="โปรเจกต์ถัดไป" data-bigproject-next>
+            <i class="bi bi-chevron-right" aria-hidden="true"></i>
+          </button>
         </div>
       </div>
 
@@ -1161,9 +1087,61 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
+  <script>
+    (function () {
+      function initBigProjectCarousel(root) {
+        const track = root.querySelector('[data-bigproject-track]');
+        const prevBtn = root.querySelector('[data-bigproject-prev]');
+        const nextBtn = root.querySelector('[data-bigproject-next]');
+        const slides = Array.from(root.querySelectorAll('.bigproject-slide'));
+
+        if (!track || !prevBtn || !nextBtn || slides.length === 0) return;
+
+        let index = 0;
+        let isAnimating = false;
+        const slideCount = slides.length;
+        const ANIM_MS = 420;
+
+        function normalize(i) {
+          return (i % slideCount + slideCount) % slideCount;
+        }
+
+        function setIndex(nextIndex) {
+          if (isAnimating) return;
+          isAnimating = true;
+
+          index = normalize(nextIndex);
+          track.style.transform = `translate3d(${-index * 100}%, 0, 0)`;
+
+          window.setTimeout(() => {
+            isAnimating = false;
+          }, ANIM_MS);
+        }
+
+        prevBtn.addEventListener('click', () => setIndex(index - 1));
+        nextBtn.addEventListener('click', () => setIndex(index + 1));
+
+        root.addEventListener('keydown', (e) => {
+          if (e.key === 'ArrowLeft') setIndex(index - 1);
+          if (e.key === 'ArrowRight') setIndex(index + 1);
+        });
+
+        setIndex(0);
+      }
+
+      document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('[data-bigproject-carousel]').forEach((root) => {
+          // ทำให้โฟกัสได้ เพื่อใช้ปุ่มลูกศรบนคีย์บอร์ด
+          if (!root.hasAttribute('tabindex')) root.setAttribute('tabindex', '0');
+          initBigProjectCarousel(root);
+        });
+      });
+    })();
+  </script>
+
   <!-- เพิ่ม audio element ตรงนี้ -->
   <audio id="backgroundMusic" loop>
-    <source src="assets/audio/BG-music.mp3" type="audio/mpeg">
+    <source src="assets/audio/BG-music-tellyou.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
 
@@ -1174,21 +1152,55 @@
       const toggleButton = document.getElementById('toggleAudio');
       const volumeSlider = document.getElementById('volumeSlider');
 
-      // พยายามเล่นเพลงอัตโนมัติ
-      audio.play().then(() => {
-        console.log('เล่นเพลงอัตโนมัติสำเร็จ');
-      }).catch((error) => {
-        console.log('ไม่สามารถเล่นเพลงอัตโนมัติได้:', error);
-        toggleButton.innerHTML = '<i class="bi bi-play"></i>'; // เปลี่ยนไอคอนเป็นปุ่มเล่น
-      });
+      function setIcon(isPlaying) {
+        toggleButton.innerHTML = isPlaying
+          ? '<i class="bi bi-pause-fill" aria-hidden="true"></i>'
+          : '<i class="bi bi-play-fill" aria-hidden="true"></i>';
+      }
+
+      function tryAutoPlay() {
+        // หมายเหตุ: เบราว์เซอร์ส่วนใหญ่บล็อก autoplay "ที่มีเสียง"
+        // วิธีที่ทำให้เริ่มเล่นได้จริงคือเริ่มแบบ muted ก่อน แล้วค่อยปลด mute เมื่อมีการโต้ตอบครั้งแรก
+        const desiredVolume = (Number(volumeSlider.value) || 0) / 100;
+        audio.volume = desiredVolume;
+        audio.muted = true;
+
+        const p = audio.play();
+        if (p && typeof p.then === 'function') {
+          p.then(() => setIcon(true)).catch(() => setIcon(false));
+        } else {
+          setIcon(!audio.paused);
+        }
+      }
+
+      tryAutoPlay();
+
+      // ถ้า autoplay ถูกบล็อก: ให้เล่นทันทีเมื่อมีการโต้ตอบครั้งแรก
+      const unlock = () => {
+        // ปลด mute และพยายามเล่นอีกครั้ง (ตอนนี้มี user gesture แล้ว)
+        audio.muted = false;
+        audio.volume = (Number(volumeSlider.value) || 0) / 100;
+        const p = audio.play();
+        if (p && typeof p.then === 'function') {
+          p.then(() => setIcon(true)).catch(() => setIcon(false));
+        } else {
+          setIcon(!audio.paused);
+        }
+      };
+      window.addEventListener('pointerdown', unlock, { capture: true, once: true });
+      window.addEventListener('keydown', unlock, { capture: true, once: true });
 
       toggleButton.addEventListener('click', function() {
         if (audio.paused) {
-          audio.play();
-          toggleButton.innerHTML = '<i class="bi bi-volume-up"></i>';
+          // ถ้ายัง muted อยู่ ให้ปลด muted เมื่อผู้ใช้กดปุ่ม
+          audio.muted = false;
+          audio.volume = (Number(volumeSlider.value) || 0) / 100;
+          const p = audio.play();
+          if (p && typeof p.then === 'function') p.then(() => setIcon(true)).catch(() => setIcon(false));
+          else setIcon(!audio.paused);
         } else {
           audio.pause();
-          toggleButton.innerHTML = '<i class="bi bi-volume-mute"></i>';
+          setIcon(false);
         }
       });
 
@@ -1198,6 +1210,7 @@
 
       // ตั้งค่าเริ่มต้นของระดับเสียง
       audio.volume = volumeSlider.value / 100;
+      setIcon(!audio.paused);
     });
   </script>
 <section id="portfolio" class="portfolio section" style="background-color: #FFB6C1;"></section>

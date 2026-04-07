@@ -80,21 +80,8 @@
 --------------------------------------------------------------*/
 body {
   color: var(--default-color);
-  background-color: pink;
+  background-color: #F3E9E3;
   font-family: var(--default-font);
-  animation: backgroundMove 10s ease infinite;
-}
-
-@keyframes backgroundMove {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
 }
 
 a {
@@ -1349,5 +1336,173 @@ section,
   100% {
     transform: translateY(calc(var(--distance, 10rem) * -1)) scale(1);
     opacity: 0;
+  }
+}
+
+/*--------------------------------------------------------------
+# BigProject (carousel)
+--------------------------------------------------------------*/
+.bigproject .card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(39, 68, 173, 0.2);
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.bigproject .card-img-top {
+  border-bottom: 3px solid #2744ad;
+  height: 400px;
+  object-fit: cover;
+}
+
+.bigproject .card-body {
+  padding: 2rem;
+}
+
+.bigproject .card-title {
+  color: #2744ad;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  font-family: "Noto Serif JP", serif;
+}
+
+.bigproject .card-text {
+  color: #444;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.bigproject .fw-bold {
+  color: #2744ad;
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #2744ad;
+  display: inline-block;
+}
+
+.bigproject ul {
+  padding-left: 1.2rem;
+}
+
+.bigproject ul li {
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.bigproject .btn-primary {
+  background-color: #2744ad;
+  border: none;
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.bigproject .btn-primary:hover {
+  background-color: #1e3690;
+  transform: scale(1.05);
+}
+
+.bigproject .list-unstyled li {
+  padding: 0.5rem 0;
+  border-bottom: 1px dashed rgba(39, 68, 173, 0.2);
+}
+
+.bigproject .list-unstyled li:last-child {
+  border-bottom: none;
+}
+
+.bigproject .list-unstyled strong {
+  color: #2744ad;
+  margin-right: 0.5rem;
+}
+
+.bigproject .bigproject-carousel {
+  position: relative;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 54px;
+}
+
+.bigproject .bigproject-viewport {
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.bigproject .bigproject-track {
+  display: flex;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+  transition: transform 420ms cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.bigproject .bigproject-slide {
+  flex: 0 0 100%;
+}
+
+.bigproject .bigproject-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: 1px solid rgba(39, 68, 173, 0.25);
+  background: rgba(255, 255, 255, 0.9);
+  color: #2744ad;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  transition: transform 150ms ease, background-color 150ms ease, box-shadow 150ms ease;
+}
+
+.bigproject .bigproject-nav:hover {
+  transform: translateY(-50%) scale(1.05);
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.16);
+}
+
+.bigproject .bigproject-nav:focus-visible {
+  outline: 3px solid rgba(39, 68, 173, 0.45);
+  outline-offset: 3px;
+}
+
+.bigproject .bigproject-nav--prev {
+  left: 10px;
+}
+
+.bigproject .bigproject-nav--next {
+  right: 10px;
+}
+
+@media (max-width: 575.98px) {
+  .bigproject .bigproject-carousel {
+    padding: 0 46px;
+  }
+
+  .bigproject .card-body {
+    padding: 1.25rem;
+  }
+
+  .bigproject .card-img-top {
+    height: 260px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bigproject .bigproject-track {
+    transition: none;
+  }
+
+  .bigproject .btn-primary,
+  .bigproject .btn-primary:hover,
+  .bigproject .bigproject-nav,
+  .bigproject .bigproject-nav:hover {
+    transition: none;
+    transform: none;
   }
 }
