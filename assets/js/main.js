@@ -176,6 +176,47 @@
         swiperElement.querySelector(".swiper-config").innerHTML.trim()
       );
 
+      // Portfolio: ต้องการ "ปิดเลื่อนอัตโนมัติ" และให้มีปุ่มลูกศรสลับสไลด์เสมอ
+      if (config && typeof config === "object") {
+        if ("autoplay" in config) {
+          delete config.autoplay; // ปิด auto-slide ทั้งหมด
+        }
+
+        // สร้างปุ่ม prev/next ถ้ายังไม่มีใน markup
+        const pagination = swiperElement.querySelector(".swiper-pagination");
+        let prevEl = swiperElement.querySelector(".swiper-button-prev");
+        let nextEl = swiperElement.querySelector(".swiper-button-next");
+
+        // ผูก pagination ให้เป็น element ของ swiper ตัวนั้นๆ
+        if (config.pagination && pagination) {
+          config.pagination.el = pagination;
+        }
+
+        if (!prevEl) {
+          prevEl = document.createElement("div");
+          prevEl.className = "swiper-button-prev";
+          if (pagination) {
+            pagination.insertAdjacentElement("afterend", prevEl);
+          } else {
+            swiperElement.appendChild(prevEl);
+          }
+        }
+
+        if (!nextEl) {
+          nextEl = document.createElement("div");
+          nextEl.className = "swiper-button-next";
+          if (pagination) {
+            // ให้ next อยู่ถัดจาก prev เพื่อความเป็นระเบียบ
+            prevEl.insertAdjacentElement("afterend", nextEl);
+          } else {
+            swiperElement.appendChild(nextEl);
+          }
+        }
+
+        // ใช้ element อ้างอิงโดยตรง เพื่อลดปัญหา selector ซ้ำข้ามหลายสไลค์บนหน้าเดียวกัน
+        config.navigation = { nextEl, prevEl };
+      }
+
       if (swiperElement.classList.contains("swiper-tab")) {
         initSwiperWithCustomPagination(swiperElement, config);
       } else {
