@@ -97,14 +97,26 @@
       }
     }
     
-    .letter {
-      display: inline-block;
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeIn 0.5s forwards;
-    }
+  .letter {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.5s forwards;
+  }
 
-    .fade-in {
+  .skills .progress-bar-with-icon .progress-bar-wrap {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .skills .skill-end-icon {
+    flex-shrink: 0;
+    font-size: 1.15rem;
+    line-height: 1;
+    color: color-mix(in srgb, #2744ad, transparent 35%);
+  }
+
+  .fade-in {
     opacity: 0;
     animation: fadeIn 0.5s forwards;
   }
@@ -277,7 +289,7 @@
             </a>
           </div>
           <div class="col-lg-8 content">
-            <h2>Game Designer &amp; Project Manager.</h2>
+            <h2>Game Designer &amp; Project Maneger.</h2>
             <p class="fst-italic py-3">
               I am a recent graduate passionate about Game Design. My strengths lie in Technical & System Design, focusing on game logic and smooth mechanics, but I am equally enthusiastic about the Creative side and Level Design. Through my internship and various projects, I have learned how to blend technical systems with fun gameplay. I am eager to learn, grow, and ready to contribute to a collaborative team.
             </p>
@@ -331,45 +343,63 @@
           <div class="col-lg-6">
 
             <div class="progress">
-              <span class="skill"><span>Game Design (MDA, Flow, Game Juice, Reward, Lighthouse, Etc) : Intermidiate</span> <i class="val">95%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+              <span class="skill"><span>Game Design (MDA, Flow,Juice, 8KOF, Lighthouse, Etc)</span> <i class="val">Intermidiate</i></span>
+              <div class="d-flex align-items-center gap-2 progress-bar-with-icon">
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <i class="bi bi-controller skill-end-icon" aria-hidden="true"></i>
               </div>
             </div><!-- End Skills Item -->
             
 
             <div class="progress">
-              <span class="skill"><span>UX/UI (Figma) : Intermidiate</span> <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              <span class="skill"><span>UX/UI (Figma) </span> <i class="val">Intermidiate</i></span>
+              <div class="d-flex align-items-center gap-2 progress-bar-with-icon">
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <i class="bi bi-palette skill-end-icon" aria-hidden="true"></i>
               </div>
             </div><!-- End Skills Item -->
 
             <div class="progress">
-              <span class="skill"><span>Unity : Intermidiate</span> <i class="val">85%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+              <span class="skill"><span>Unity </span> <i class="val">Intermidiate</i></span>
+              <div class="d-flex align-items-center gap-2 progress-bar-with-icon">
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <i class="bi bi-unity skill-end-icon" aria-hidden="true"></i>
               </div>
             </div><!-- End Skills Item -->
 
             <div class="progress">
-              <span class="skill"><span>Unreal Engine 5 : Beginner</span> <i class="val">75%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+              <span class="skill"><span>Unreal Engine 5</span> <i class="val">Beginner</i></span>
+              <div class="d-flex align-items-center gap-2 progress-bar-with-icon">
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <i class="bi bi-gpu-card skill-end-icon" aria-hidden="true"></i>
               </div>
             </div><!-- End Skills Item -->
 
             <div class="progress">
-              <span class="skill"><span>Document/Report : Good</span> <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              <span class="skill"><span>Document/Report </span> <i class="val">Good</i></span>
+              <div class="d-flex align-items-center gap-2 progress-bar-with-icon">
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <i class="bi bi-file-earmark-text skill-end-icon" aria-hidden="true"></i>
               </div>
             </div><!-- End Skills Item -->
 
             <div class="progress">
-              <span class="skill"><span>English skills : Good</span> <i class="val">85%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+              <span class="skill"><span>English skills </span> <i class="val">Good</i></span>
+              <div class="d-flex align-items-center gap-2 progress-bar-with-icon">
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <i class="bi bi-translate skill-end-icon" aria-hidden="true"></i>
               </div>
             </div><!-- End Skills Item -->
 
@@ -379,44 +409,62 @@
           <div class="col-lg-6">
 
             <div class="progress">
-              <span class="skill"><span>Project Manager : Good</span> <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              <span class="skill"><span>Project Manager </span> <i class="val">Good</i></span>
+              <div class="d-flex align-items-center gap-2 progress-bar-with-icon">
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <i class="bi bi-kanban skill-end-icon" aria-hidden="true"></i>
               </div>
             </div><!-- End Skills Item -->
 
             <div class="progress">
-              <span class="skill"><span>Google Sheet & Exeal Data for game : Good</span> <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              <span class="skill"><span>Google Sheet & Exeal Data for game </span> <i class="val">Good</i></span>
+              <div class="d-flex align-items-center gap-2 progress-bar-with-icon">
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <i class="bi bi-file-earmark-spreadsheet skill-end-icon" aria-hidden="true"></i>
               </div>
             </div><!-- End Skills Item -->
 
             <div class="progress">
-              <span class="skill"><span>Adobe Appication/Lightroom,Premier Pro,Photoshop : Good</span> <i class="val">85%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+              <span class="skill"><span>Adobe Appication/Lightroom,Premier Pro,Photoshop </span> <i class="val">Good</i></span>
+              <div class="d-flex align-items-center gap-2 progress-bar-with-icon">
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <i class="bi bi-brush skill-end-icon" aria-hidden="true"></i>
               </div>
             </div><!-- End Skills Item -->
 
             <div class="progress">
-              <span class="skill"><span>AI For work (CursorAI, claude, Framer, Lelume) : Good</span> <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              <span class="skill"><span>AI For work (CursorAI, claude, Framer, Lelume) </span> <i class="val">Good</i></span>
+              <div class="d-flex align-items-center gap-2 progress-bar-with-icon">
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <i class="bi bi-robot skill-end-icon" aria-hidden="true"></i>
               </div>
             </div><!-- End Skills Item -->
 
             <div class="progress">
-              <span class="skill"><span>Photography: Intermidiate </span> <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              <span class="skill"><span>Photography </span> <i class="val">Intermidiate</i></span>
+              <div class="d-flex align-items-center gap-2 progress-bar-with-icon">
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <i class="bi bi-camera skill-end-icon" aria-hidden="true"></i>
               </div>
             </div><!-- End Skills Item -->
 
             <div class="progress">
-              <span class="skill"><span>Microsoft Appication/Word/Exeal/Powerpoint : Good</span> <i class="val">75%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                <span class="skill"><span>Microsoft Appication/Word/Exeal/Powerpoint </span> <i class="val">Good</i></span>
+              <div class="d-flex align-items-center gap-2 progress-bar-with-icon">
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <i class="bi bi-microsoft skill-end-icon" aria-hidden="true"></i>
               </div>
             </div><!-- End Skills Item -->
           </div>
@@ -911,8 +959,8 @@
               <div class="portfolio-content h-100">
                 <img src="assets/img/portfolio/or1-2.png" class="img-fluid" alt="">
                 <div class="portfolio-info">
-                  <h4>เกมเศรษฐีเเม่โพสพ</h4>
-                  <p>โปรเจคบอร์ดเกม ธีมพระแม่โพสพ</p>
+                  <h4>Mae Phosop Monopoly</h4>
+                  <p>Princess Popo Boardgame</p>
                   <a href="assets/img/portfolio/or1-2.png" title="Staff/Organizer 1" data-gallery="portfolio-gallery-Game" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                   <a href="portfolio-or1.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
@@ -923,8 +971,8 @@
               <div class="portfolio-content h-100">
                 <img src="assets/img/portfolio/or2-1.jpg" class="img-fluid" alt="">
                 <div class="portfolio-info">
-                  <h4>Staff งานEvent</h4>
-                  <p>เป็นStaffงานบอร์ดเกมต่างๆ</p>
+                  <h4>Event Staff</h4>
+                  <p>Event Staff for boardgame</p>
                   <a href="assets/img/portfolio/or2-1.jpg" title="Staff/Organizer 2" data-gallery="portfolio-gallery-Staff" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                   <a href="portfolio-or2.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
@@ -948,7 +996,7 @@
                 <img src="assets/img/portfolio/app-2.png" class="img-fluid" alt="">
                 <div class="portfolio-info">
                   <h4>Raid</h4>
-                  <p>My Game by using Monogame in Extraction RPG Game</p>
+                  <p>Extraction RPG Game by using Monogame</p>
                   <a href="assets/img/portfolio/game-2-1.png" title="Game 2" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                   <a href="portfolio-game2.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
@@ -984,7 +1032,7 @@
                 <img src="assets/img/portfolio/pho-2.jpg" class="img-fluid" alt="">
                 <div class="portfolio-info">
                   <h4>Photography</h4>
-                  <p>เป็นผู้ถ่ายภาพของกิจกรรมรับน้องใหม่ของ คณะ CAMT Freshman 2567</p>
+                  <p>Photography for CAMT Freshman 2567</p>
                   <a href="assets/img/portfolio/pho-2.jpg" title="Photography" data-gallery="portfolio-gallery-Reward" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                   <a href="portfolio-pho.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
@@ -1103,7 +1151,7 @@
                 <img src="assets/img/portfolio/Smo.png" class="img-fluid" alt="">
                 <div class="portfolio-info">
                   <h4>SMO CAMT66 [Digital]</h4>
-                  <p>University cousin</p>
+                  <p>University faculty SMO [council]</p>
                   <a href="assets/img/portfolio/Smo.png" title="Smo" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                 </div>
               </div>
@@ -1126,7 +1174,7 @@
                 <img src="/assets/img/portfolio/RedVeil/Big_main.png" class="img-fluid" alt="">
                 <div class="portfolio-info">
                   <h4>RedVeil</h4>
-                  <p>เกม 3D PC Soul-like</p>
+                  <p>3D PC Soul-like</p>
                   <a href="/assets/img/portfolio/RedVeil/Big_main.png" title="RedVeil" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                   <a href="portfolio-Redveil.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
@@ -1260,7 +1308,7 @@
                   <h4>KanTok(ขันโตก)</h4>
                   <p>Photography and Staff Kantok Event</p>
                   <a href="assets/img/portfolio/kan.JPG" title="Art-3" data-gallery="portfolio-gallery-Staff" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="https://drive.google.com/drive/folders/1VieeWmf7HZCMit_u2uezkRYUis2oiAi_?usp=sharing" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <a href="https://drive.google.com/drive/folders/1w4ZvK9SxsRNlQuUXvc9O-KeSHWgBjZAs" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -1318,7 +1366,7 @@
                   <h4>Blackest Night GDD</h4>
                   <p></p>
                   <a href="assets/img/portfolio/game3-8.png" title="Art-3" data-gallery="portfolio-gallery-artBook" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="https://drive.google.com/file/d/1Qo8aO-t7CwJ0pr_d7hfA95C0ux1RUyI7/view?usp=drive_link" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <a href="https://docs.google.com/document/d/1E8cCXm2xQOTfTlyDGsjQ15PnJwslr3sZkwxG-3y5EVs/edit?tab=t.0" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -1328,7 +1376,7 @@
                 <img src="assets/img/portfolio/E-sport.jpg" class="img-fluid" alt="">
                 <div class="portfolio-info">
                   <h4>Valorant CMU tournament Analysis Doc</h4>
-                  <p></p>
+                  <p>Valorant CMU tournament Analysis Document</p>
                   <a href="assets/img/portfolio/E-sport.jpg" title="Art-3" data-gallery="portfolio-gallery-artBook" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                   <a href="https://drive.google.com/file/d/1mUHvgt_ADe651AlLpeuWcS4CRr-aSj-l/view?usp=drive_link" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>

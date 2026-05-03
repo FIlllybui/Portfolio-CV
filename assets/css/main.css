@@ -703,37 +703,55 @@ section,
 # Skills Section
 --------------------------------------------------------------*/
 .skills .progress {
-  height: 60px;
+  min-height: 60px;
+  height: auto;
   display: block;
   background: none;
   border-radius: 0;
+  padding-bottom: 6px;
 }
 
 .skills .progress .skill {
-  color: var(--heading-color);
+  color: #2744ad;
   padding: 0;
-  margin: 0 0 6px 0;
+  margin: 0 0 10px 0;
   text-transform: uppercase;
   display: block;
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.045em;
+  line-height: 1.4;
   font-family: var(--heading-font);
 }
 
 .skills .progress .skill .val {
   float: right;
   font-style: normal;
+  font-weight: 800;
+  font-size: 1rem;
+  color: color-mix(in srgb, #2744ad, #050d18 18%);
 }
 
 .skills .progress-bar-wrap {
-  background: color-mix(in srgb, var(--default-color), transparent 90%);
+  background: color-mix(in srgb, #2744ad, transparent 92%);
   height: 10px;
+  border-radius: 999px;
+  overflow: hidden;
 }
 
 .skills .progress-bar {
   width: 1px;
   height: 10px;
-  transition: 0.9s;
-  background-color: var(--diff-color);
+  transition: width 0.9s ease-out;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    #1e3a8a 0%,
+    #2744ad 28%,
+    #3b6cff 62%,
+    #4fd1c5 100%
+  );
+  box-shadow: 0 0 14px color-mix(in srgb, #2744ad, transparent 55%);
 }
 
 /*--------------------------------------------------------------
