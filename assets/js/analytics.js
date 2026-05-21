@@ -4,9 +4,10 @@
  * (Admin → Data streams → เลือกเว็บ → Measurement ID รูปแบบ G-XXXXXXXXXX)
  */
 const GA4_MEASUREMENT_ID = 'G-76ZRK3ZB6Q';
+const GA4_PLACEHOLDER_ID = 'G-XXXXXXXXXX';
 
 (function () {
-  if (!GA4_MEASUREMENT_ID || GA4_MEASUREMENT_ID === 'G-76ZRK3ZB6Q') {
+  if (!GA4_MEASUREMENT_ID || GA4_MEASUREMENT_ID === GA4_PLACEHOLDER_ID) {
     return;
   }
 
