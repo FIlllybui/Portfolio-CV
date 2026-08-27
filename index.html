@@ -18,7 +18,9 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -41,14 +43,17 @@
   <!-- เพิ่ม CSS สำหรับธีมญี่ปุ่น -->
   <style>
     body {
-      background-color: #F3E9E3; /* สีพื้นหลังแบบกระดาษญี่ปุ่น */
-      font-family: 'Noto Sans JP', sans-serif; /* ฟอนต์ญี่ปุ่น */
+      background-color: #F3E9E3;
+      /* สีพื้นหลังแบบกระดาษญี่ปุ่น */
+      font-family: 'Noto Sans JP', sans-serif;
+      /* ฟอนต์ญี่ปุ่น */
     }
-    
+
     .header {
-      background-color: #2744ad; /* สีแดงแบบญี่ปุ่น */
+      background-color: #2744ad;
+      /* สีแดงแบบญี่ปุ่น */
     }
-    
+
     .sakura-background {
       position: fixed;
       top: 0;
@@ -59,136 +64,146 @@
       z-index: -1;
       overflow: hidden;
     }
-    
+
     .petal {
       position: absolute;
       background-color: #FFB7C5;
       border-radius: 150% 0 150% 0;
       animation: falling linear infinite;
     }
-    
+
     @keyframes falling {
-      0% { transform: translateY(-10%) rotate(0deg); }
-      100% { transform: translateY(100vh) rotate(720deg); }
+      0% {
+        transform: translateY(-10%) rotate(0deg);
+      }
+
+      100% {
+        transform: translateY(100vh) rotate(720deg);
+      }
     }
-    
+
     .section-title h2 {
       font-family: 'Noto Serif JP', serif;
       color: #2744ad;
     }
-    
+
     .btn {
       background-color: #2744ad;
       color: white;
     }
-    
+
     .footer {
       background-color: #2C3E50;
       color: white;
     }
-    
-    
+
+
     .fade-in {
       opacity: 0;
       animation: fadeIn 0.5s forwards;
     }
-    
+
     @keyframes fadeIn {
       to {
         opacity: 1;
         transform: translateY(0);
       }
     }
-    
-  .letter {
-    display: inline-block;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeIn 0.5s forwards;
-  }
 
-  .skills .progress-bar-with-icon .progress-bar-wrap {
-    flex: 1;
-    min-width: 0;
-  }
-
-  .skills .skill-end-icon {
-    flex-shrink: 0;
-    font-size: 1.15rem;
-    line-height: 1;
-    color: color-mix(in srgb, #2744ad, transparent 35%);
-  }
-
-  .fade-in {
-    opacity: 0;
-    animation: fadeIn 0.5s forwards;
-  }
-
-  @keyframes fadeIn {
-    to {
-      opacity: 1;
-      transform: translateY(0);
+    .letter {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 0.5s forwards;
     }
-  }
 
-  .letter {
-    display: inline-block;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeIn 0.5s forwards;
-  }
+    .skills .progress-bar-with-icon .progress-bar-wrap {
+      flex: 1;
+      min-width: 0;
+    }
 
-  /* สไตล์สำหรับ Portfolio Section */
-  .portfolio .portfolio-content {
-    position: relative;
-    overflow: hidden;
-    height: 300px; /* กำหนดความสูงคงที่ */
-  }
+    .skills .skill-end-icon {
+      flex-shrink: 0;
+      font-size: 1.15rem;
+      line-height: 1;
+      color: color-mix(in srgb, #2744ad, transparent 35%);
+    }
 
-  .portfolio .portfolio-content img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* ทำให้รูปเต็มพื้นที่โดยไม่ผิดสัดส่วน */
-    transition: transform 0.3s ease;
-  }
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 0.5s forwards;
+    }
 
-  .portfolio .portfolio-item {
-    margin-bottom: 30px;
-    height: 300px; /* กำหนดความสูงคงที่ */
-  }
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
-  .portfolio .portfolio-info {
-    background: rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    position: absolute;
-    bottom: -100%;
-    left: 0;
-    right: 0;
-    text-align: center;
-    z-index: 3;
-    transition: all 0.3s ease;
-  }
+    .letter {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 0.5s forwards;
+    }
 
-  .portfolio .portfolio-content:hover .portfolio-info {
-    bottom: 0;
-  }
+    /* สไตล์สำหรับ Portfolio Section */
+    .portfolio .portfolio-content {
+      position: relative;
+      overflow: hidden;
+      height: 300px;
+      /* กำหนดความสูงคงที่ */
+    }
 
-  .portfolio .portfolio-info h4 {
-    font-size: 18px;
-    color: #fff;
-    font-weight: 600;
-    margin-bottom: 5px;
-  }
+    .portfolio .portfolio-content img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      /* ทำให้รูปเต็มพื้นที่โดยไม่ผิดสัดส่วน */
+      transition: transform 0.3s ease;
+    }
 
-  .portfolio .portfolio-info p {
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 14px;
-    margin-bottom: 0;
-  }
+    .portfolio .portfolio-item {
+      margin-bottom: 30px;
+      height: 300px;
+      /* กำหนดความสูงคงที่ */
+    }
+
+    .portfolio .portfolio-info {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      position: absolute;
+      bottom: -100%;
+      left: 0;
+      right: 0;
+      text-align: center;
+      z-index: 3;
+      transition: all 0.3s ease;
+    }
+
+    .portfolio .portfolio-content:hover .portfolio-info {
+      bottom: 0;
+    }
+
+    .portfolio .portfolio-info h4 {
+      font-size: 18px;
+      color: #fff;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    .portfolio .portfolio-info p {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 14px;
+      margin-bottom: 0;
+    }
   </style>
-  
+
   <!-- เพิ่มฟอนต์ญี่ปุ่น -->
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap"
+    rel="stylesheet">
 </head>
 
 <body class="index-page">
@@ -200,12 +215,15 @@
 
     <!-- แก้ไขส่วนควบคุมเสียงตรงนี้ -->
     <div id="audio-controls" class="position-fixed top-0 end-0 m-3">
-      <button id="toggleAudio" class="btn btn-sm btn-light" aria-label="เล่นเพลง"><i class="bi bi-play-fill" aria-hidden="true"></i></button>
-      <input type="range" id="volumeSlider" min="0" max="100" step="1" value="5" class="form-range ms-2" style="width: 100px;">
+      <button id="toggleAudio" class="btn btn-sm btn-light" aria-label="เล่นเพลง"><i class="bi bi-play-fill"
+          aria-hidden="true"></i></button>
+      <input type="range" id="volumeSlider" min="0" max="100" step="1" value="5" class="form-range ms-2"
+        style="width: 100px;">
     </div>
 
     <div class="profile-img">
-      <img src="assets/img/my-profile-img3.jpg" alt="" class="img-fluid rounded-circle" style="width: auto; height: auto; max-width: 300px; max-height: 200px;">
+      <img src="assets/img/my-profile-img3.jpg" alt="" class="img-fluid rounded-circle"
+        style="width: auto; height: auto; max-width: 300px; max-height: 200px;">
     </div>
 
     <a href="index.html" class="logo d-flex align-items-center justify-content-center">
@@ -213,14 +231,16 @@
       <!-- <img src="assets/img/logo.png" alt=""> -->
       <h1 class="sitename stylesheet">
         <span class="letter">Aphiwat Boonyakit</span>
-       
+
       </h1>
     </a>
 
     <div class="social-links text-center">
       <a href="https://github.com/FIlllybui" target="_blank" class="github"><i class="bi bi-github"></i></a>
-      <a href="https://www.facebook.com/profile.php?id=100009230634393" target="_blank" class="facebook"><i class="bi bi-facebook"></i></a>
-      <a href="https://www.instagram.com/filllybui_" target="_blank" class="instagram"><i class="bi bi-instagram"></i></a>
+      <a href="https://www.facebook.com/profile.php?id=100009230634393" target="_blank" class="facebook"><i
+          class="bi bi-facebook"></i></a>
+      <a href="https://www.instagram.com/filllybui_" target="_blank" class="instagram"><i
+          class="bi bi-instagram"></i></a>
       <a href="https://filllybui.itch.io/" target="_blank" class="itchio"><i class="bi bi-controller"></i></a>
       <a href="https://gitlab.com/Aphiwit123" target="_blank" class="Gitlab"><i class="bi bi-gitlab"></i></a>
     </div>
@@ -245,7 +265,8 @@
     <!-- Hero Section -->
     <section id="hero" class="hero section">
 
-      <img src="assets/img/MainProfile.png" alt="" data-aos="fade-in" class="moving-background" id="heroBackgroundImage">
+      <img src="assets/img/MainProfile.png" alt="" data-aos="fade-in" class="moving-background"
+        id="heroBackgroundImage">
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <h2>
@@ -268,7 +289,10 @@
           <span class="letter">a</span>
           <span class="letter">t</span>
         </h2>
-        <p style="color: black;">I'm <span class="typed" data-typed-items="Game Designer, Project Maneger, Game UX Designer, Photographer, Gamer">Designer</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+        <p style="color: black;">I'm <span class="typed"
+            data-typed-items="Game Designer, Project Maneger, Game UX Designer, Photographer, Gamer">Designer</span><span
+            class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span
+            class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
       </div>
 
     </section><!-- /Hero Section -->
@@ -279,8 +303,14 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>About</h2>
-        <p>I am a student at the College of Arts, Media, and Technology (CAMT), majoring in Digital Game at Chiang Mai University. I have a strong passion for game development and hope to apply the knowledge I have gained during my studies to this internship. Throughout my academic journey, I have had the opportunity to participate in various projects that have helped me develop essential skills in coding, game design, teamwork, and project planning. These experiences have strengthened my ability to work effectively in challenging environments.
-          I am an enthusiastic learner who enjoys exploring new ideas and adapting to different situations to achieve goals. I am eager to contribute my skills and creativity to support the team and organization during my internship.</p>
+        <p>I am a student at the College of Arts, Media, and Technology (CAMT), majoring in Digital Game at Chiang Mai
+          University. I have a strong passion for game development and hope to apply the knowledge I have gained during
+          my studies to this internship. Throughout my academic journey, I have had the opportunity to participate in
+          various projects that have helped me develop essential skills in coding, game design, teamwork, and project
+          planning. These experiences have strengthened my ability to work effectively in challenging environments.
+          I am an enthusiastic learner who enjoys exploring new ideas and adapting to different situations to achieve
+          goals. I am eager to contribute my skills and creativity to support the team and organization during my
+          internship.</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -294,13 +324,18 @@
           <div class="col-lg-8 content">
             <h2>Game Designer &amp; Project Maneger.</h2>
             <p class="fst-italic py-3">
-              I am a recent graduate passionate about Game Design. My strengths lie in Technical & System Design, focusing on game logic and smooth mechanics, but I am equally enthusiastic about the Creative side and Level Design. Through my internship and various projects, I have learned how to blend technical systems with fun gameplay. I am eager to learn, grow, and ready to contribute to a collaborative team.
+              I am a recent graduate passionate about Game Design. My strengths lie in Technical & System Design,
+              focusing on game logic and smooth mechanics, but I am equally enthusiastic about the Creative side and
+              Level Design. Through my internship and various projects, I have learned how to blend technical systems
+              with fun gameplay. I am eager to learn, grow, and ready to contribute to a collaborative team.
             </p>
             <div class="row">
               <div class="col-lg-6">
                 <ul>
                   <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>17 August 2003</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Resume:</strong> <span><a href="https://canva.link/ko35d5ma7vq75ob" target="_blank" rel="noopener noreferrer">https://canva.link/ko35d5ma7vq75ob</a></span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Resume:</strong> <span><a
+                        href="https://canva.link/ko35d5ma7vq75ob" target="_blank"
+                        rel="noopener noreferrer">https://canva.link/ko35d5ma7vq75ob</a></span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>0837534795</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Chiang Mai, Thailand</span></li>
                 </ul>
@@ -309,13 +344,18 @@
                 <ul>
                   <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>22</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Student</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>Aphiwit.boonyakiat@gmail.com</span></li>
-                  
+                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong>
+                    <span>Aphiwit.boonyakiat@gmail.com</span>
+                  </li>
+
                 </ul>
               </div>
             </div>
             <p class="py-3">
-              Having worked in a professional game studio, combined with my background in indie projects and game jams, I have a strong grasp of production pipelines. I am always eager to learn and tackle new challenges in game development. My core soft skills include teamwork, clear communication, and problem-solving under pressure. I am highly adaptable and ready to collaborate to drive our team's success.            </p>
+              Having worked in a professional game studio, combined with my background in indie projects and game jams,
+              I have a strong grasp of production pipelines. I am always eager to learn and tackle new challenges in
+              game development. My core soft skills include teamwork, clear communication, and problem-solving under
+              pressure. I am highly adaptable and ready to collaborate to drive our team's success. </p>
           </div>
         </div>
 
@@ -323,9 +363,9 @@
 
     </section><!-- /About Section -->
 
-        </div>
+    </div>
 
-      </div>
+    </div>
 
     </section><!-- /Stats Section -->
 
@@ -335,7 +375,10 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Skills</h2>
-        <p>In terms of hard skills, my core competencies lie in Game Design, Level Design, and UX/UI (Figma). I develop games effectively using Unity and Unreal Engine 5, and I possess strong data management skills via Google Sheets to control game structures and balance. Furthermore, I have supplementary skills in technical documentation and the Adobe Creative Suite to support the overall production process.
+        <p>In terms of hard skills, my core competencies lie in Game Design, Level Design, and UX/UI (Figma). I develop
+          games effectively using Unity and Unreal Engine 5, and I possess strong data management skills via Google
+          Sheets to control game structures and balance. Furthermore, I have supplementary skills in technical
+          documentation and the Adobe Creative Suite to support the overall production process.
         </p>
       </div><!-- End Section Title -->
 
@@ -346,21 +389,24 @@
           <div class="col-lg-6">
 
             <div class="progress">
-              <span class="skill"><span>Game Design (MDA, Flow,Juice, 8KOF, Lighthouse, Etc)</span> <i class="val">Intermidiate</i></span>
+              <span class="skill"><span>Game Design (MDA, Flow,Juice, 8KOF, Lighthouse, Etc)</span> <i
+                  class="val">Intermidiate</i></span>
               <div class="d-flex align-items-center gap-2 progress-bar-with-icon">
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0"
+                    aria-valuemax="100"></div>
                 </div>
                 <i class="bi bi-controller skill-end-icon" aria-hidden="true"></i>
               </div>
             </div><!-- End Skills Item -->
-            
+
 
             <div class="progress">
               <span class="skill"><span>UX/UI (Figma) </span> <i class="val">Intermidiate</i></span>
               <div class="d-flex align-items-center gap-2 progress-bar-with-icon">
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0"
+                    aria-valuemax="100"></div>
                 </div>
                 <i class="bi bi-palette skill-end-icon" aria-hidden="true"></i>
               </div>
@@ -370,7 +416,8 @@
               <span class="skill"><span>Unity </span> <i class="val">Intermidiate</i></span>
               <div class="d-flex align-items-center gap-2 progress-bar-with-icon">
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0"
+                    aria-valuemax="100"></div>
                 </div>
                 <i class="bi bi-unity skill-end-icon" aria-hidden="true"></i>
               </div>
@@ -380,7 +427,8 @@
               <span class="skill"><span>Unreal Engine 5</span> <i class="val">Beginner</i></span>
               <div class="d-flex align-items-center gap-2 progress-bar-with-icon">
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0"
+                    aria-valuemax="100"></div>
                 </div>
                 <i class="bi bi-gpu-card skill-end-icon" aria-hidden="true"></i>
               </div>
@@ -390,17 +438,19 @@
               <span class="skill"><span>Document/Report </span> <i class="val">Good</i></span>
               <div class="d-flex align-items-center gap-2 progress-bar-with-icon">
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0"
+                    aria-valuemax="100"></div>
                 </div>
                 <i class="bi bi-file-earmark-text skill-end-icon" aria-hidden="true"></i>
               </div>
             </div><!-- End Skills Item -->
 
             <div class="progress">
-              <span class="skill"><span>English skills </span> <i class="val">Good</i></span>
+              <span class="skill"><span>English skills </span> <i class="val">Good Toeic:610</i></span>
               <div class="d-flex align-items-center gap-2 progress-bar-with-icon">
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0"
+                    aria-valuemax="100"></div>
                 </div>
                 <i class="bi bi-translate skill-end-icon" aria-hidden="true"></i>
               </div>
@@ -415,7 +465,8 @@
               <span class="skill"><span>Project Manager </span> <i class="val">Good</i></span>
               <div class="d-flex align-items-center gap-2 progress-bar-with-icon">
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0"
+                    aria-valuemax="100"></div>
                 </div>
                 <i class="bi bi-kanban skill-end-icon" aria-hidden="true"></i>
               </div>
@@ -425,27 +476,32 @@
               <span class="skill"><span>Google Sheet & Exeal Data for game </span> <i class="val">Good</i></span>
               <div class="d-flex align-items-center gap-2 progress-bar-with-icon">
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0"
+                    aria-valuemax="100"></div>
                 </div>
                 <i class="bi bi-file-earmark-spreadsheet skill-end-icon" aria-hidden="true"></i>
               </div>
             </div><!-- End Skills Item -->
 
             <div class="progress">
-              <span class="skill"><span>Adobe Appication/Lightroom,Premier Pro,Photoshop </span> <i class="val">Good</i></span>
+              <span class="skill"><span>Adobe Appication/Lightroom,Premier Pro,Photoshop </span> <i
+                  class="val">Good</i></span>
               <div class="d-flex align-items-center gap-2 progress-bar-with-icon">
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0"
+                    aria-valuemax="100"></div>
                 </div>
                 <i class="bi bi-brush skill-end-icon" aria-hidden="true"></i>
               </div>
             </div><!-- End Skills Item -->
 
             <div class="progress">
-              <span class="skill"><span>AI For work (CursorAI, claude, Framer, Lelume) </span> <i class="val">Good</i></span>
+              <span class="skill"><span>AI For work (CursorAI, claude, Framer, Lelume) </span> <i
+                  class="val">Good</i></span>
               <div class="d-flex align-items-center gap-2 progress-bar-with-icon">
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0"
+                    aria-valuemax="100"></div>
                 </div>
                 <i class="bi bi-robot skill-end-icon" aria-hidden="true"></i>
               </div>
@@ -455,38 +511,44 @@
               <span class="skill"><span>Photography </span> <i class="val">Intermidiate</i></span>
               <div class="d-flex align-items-center gap-2 progress-bar-with-icon">
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0"
+                    aria-valuemax="100"></div>
                 </div>
                 <i class="bi bi-camera skill-end-icon" aria-hidden="true"></i>
               </div>
             </div><!-- End Skills Item -->
 
             <div class="progress">
-                <span class="skill"><span>Microsoft Appication/Word/Exeal/Powerpoint </span> <i class="val">Good</i></span>
+              <span class="skill"><span>Microsoft Appication/Word/Exeal/Powerpoint </span> <i
+                  class="val">Good</i></span>
               <div class="d-flex align-items-center gap-2 progress-bar-with-icon">
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0"
+                    aria-valuemax="100"></div>
                 </div>
                 <i class="bi bi-microsoft skill-end-icon" aria-hidden="true"></i>
               </div>
             </div><!-- End Skills Item -->
           </div>
-          
-        <div>
-          <h2> 
-            <h2>  Languages: Thai, English</h2>
-            <h2>  Preferred Work Locations: Bangkok, Chiang Mai </h2>
-            <h2>  Work Availability: Open to both Onsite and Online work.</h2>
-        </div>
 
-      
+          <div>
+            <h2>
+              <h2> Languages: Thai, English</h2>
+              <h2> Preferred Work Locations: Bangkok, Chiang Mai </h2>
+              <h2> Work Availability: Open to both Onsite and Online work.</h2>
+          </div>
+
+
     </section><!-- /Skills Section -->
     <!-- Resume Section -->
     <section id="resume" class="resume section">
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Resume</h2>
-        <p>My name is Apiwit Boonyakiat, and I am a Game Designer with game development experience in both Unity 3D & Unreal Engine 5. I have knowledge in game design, UX/UI, and writing data into Excel. With knowledge in C#, Git, and AI tools, I can create prototypes and collaborate with Developers. I love learning and seeking new challenges, ready to create work that both players and the development team can enjoy.</p>
+        <p>My name is Apiwit Boonyakiat, and I am a Game Designer with game development experience in both Unity 3D &
+          Unreal Engine 5. I have knowledge in game design, UX/UI, and writing data into Excel. With knowledge in C#,
+          Git, and AI tools, I can create prototypes and collaborate with Developers. I love learning and seeking new
+          challenges, ready to create work that both players and the development team can enjoy.</p>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -503,18 +565,20 @@
               <ul>
                 <li>Faculty : CAMT (College Art and Meadia Technology)</li>
                 <li>Branch : Digital Game</li>
-                <li>Admitted in 2022 via a portfolio showcasing my game development and competition experience. The program provided hands-on experience in creating multiple projects using Unity and Unreal Engine, alongside core studies in game design, digital art, and related technologies.</li>
+                <li>Admitted in 2022 via a portfolio showcasing my game development and competition experience. The
+                  program provided hands-on experience in creating multiple projects using Unity and Unreal Engine,
+                  alongside core studies in game design, digital art, and related technologies.</li>
               </ul>
             </div><!-- Edn Resume Item -->
-          
+
             <div class="resume-item">
               <h4>High School</h4>
               <h5>2018 - 2020</h5>
               <p><em><b>Dara Academy, Chiang Mai</b></em></p>
               <ul>
-              <li>Graduated from the Science-Mathematics study program.</li>
-              <li>Active member of the M-Tech (Media Technology) IT club.</li>
-              <li>Studies With.</li>
+                <li>Graduated from the Science-Mathematics study program.</li>
+                <li>Active member of the M-Tech (Media Technology) IT club.</li>
+                <li>Studies With.</li>
               </ul>
             </div><!-- End Resume Item -->
 
@@ -523,42 +587,50 @@
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
             <h3 class="resume-title">Professional Experience</h3>
 
-              <div class="resume-item">
-                <h4>Varisoft co. ltd </h4>
-                <h5>2025 - 2026</h5>
-                <p><em><b>Game Designer [Trainee] </b></em></p>
-                <ul>
-                  <li><b>Game Design & Documentation:</b> Co-authored Game Design Documents (GDD) across multiple projects. Designed engaging level layouts for World Runner, and created the storyline, world-building, and quest mechanics for Pakkapow M.</li>
-                  <li><b>Prototyping & UX/UI:</b> Utilized Figma to design UX workflows and interactive prototypes, effectively communicating game mechanics and design systems to cross-functional teams.</li>
-                  <li><b>Data Pipeline Integration:</b> Managed game data pipelines by building direct Google Sheets-to-Unity integrations, enabling efficient balance management and data updates.</li>
-                  <li><b>Live-Service Support:</b> Maintained and supported live operations for Zabbworld, ensuring smooth gameplay experiences.</li>
-                  <li><b>Quality Assurance:</b> Collaborated with the QA team to create and execute test cases, verifying that all mechanics and implemented features aligned strictly with the design specifications.</li>
-                </ul>
-              </div><!-- Edn Resume Item -->
+            <div class="resume-item">
+              <h4>Varisoft co. ltd </h4>
+              <h5>2025 - 2026</h5>
+              <p><em><b>Game Designer [Trainee] </b></em></p>
+              <ul>
+                <li><b>Game Design & Documentation:</b> Co-authored Game Design Documents (GDD) across multiple
+                  projects. Designed engaging level layouts for World Runner, and created the storyline, world-building,
+                  and quest mechanics for Pakkapow M.</li>
+                <li><b>Prototyping & UX/UI:</b> Utilized Figma to design UX workflows and interactive prototypes,
+                  effectively communicating game mechanics and design systems to cross-functional teams.</li>
+                <li><b>Data Pipeline Integration:</b> Managed game data pipelines by building direct Google
+                  Sheets-to-Unity integrations, enabling efficient balance management and data updates.</li>
+                <li><b>Live-Service Support:</b> Maintained and supported live operations for Zabbworld, ensuring smooth
+                  gameplay experiences.</li>
+                <li><b>Quality Assurance:</b> Collaborated with the QA team to create and execute test cases, verifying
+                  that all mechanics and implemented features aligned strictly with the design specifications.</li>
+              </ul>
+            </div><!-- Edn Resume Item -->
 
-              <div class="resume-item">
-                <h4>Digital Solution (Digital Company in University)</h4>
-                <h5>2023 - 2025</h5>
-                <p><em><b>Project Maneger and Photographer</b></em></p>
-                <ul>
-                  <li><b>Staff and Photographer for event</b></li>
-                  <li><b>Web UX/UI:</b> Designed a Chiang Mai University web portal via Figma, conducting user research, prototyping, and usability testing.</li>
-                  <li><b>Project Manager:</b> Gathered client requirements, delegated tasks, and managed the team's pipeline to systematically meet project goals.</li>                 
-                  <li><b>Production:</b> Acted as a photographer, scriptwriter, and coordinator for studio events.</li>
-                </ul>
-              </div><!-- Edn Resume Item -->
+            <div class="resume-item">
+              <h4>Digital Solution (Digital Company in University)</h4>
+              <h5>2023 - 2025</h5>
+              <p><em><b>Project Maneger and Photographer</b></em></p>
+              <ul>
+                <li><b>Staff and Photographer for event</b></li>
+                <li><b>Web UX/UI:</b> Designed a Chiang Mai University web portal via Figma, conducting user research,
+                  prototyping, and usability testing.</li>
+                <li><b>Project Manager:</b> Gathered client requirements, delegated tasks, and managed the team's
+                  pipeline to systematically meet project goals.</li>
+                <li><b>Production:</b> Acted as a photographer, scriptwriter, and coordinator for studio events.</li>
+              </ul>
+            </div><!-- Edn Resume Item -->
 
-              
-              <div class="resume-item">
-                <h4>SMO CAMT faculty of Chiang Mai University</h4>
-                <h5>2022 - 2024</h5>
-                <p><em><b>Photographer and Meadia</b> </em></p>
-                <ul>
-                  <li>Photographed faculty events and designed promotional posters.</li>
-                  <li>Managed the SMO Facebook page, handling public relations and student inquiries.</li>
-                  <li>Organized and coordinated various events and activities for faculty students.</li>
-                </ul>
-              </div><!-- Edn Resume Item -->
+
+            <div class="resume-item">
+              <h4>SMO CAMT faculty of Chiang Mai University</h4>
+              <h5>2022 - 2024</h5>
+              <p><em><b>Photographer and Meadia</b> </em></p>
+              <ul>
+                <li>Photographed faculty events and designed promotional posters.</li>
+                <li>Managed the SMO Facebook page, handling public relations and student inquiries.</li>
+                <li>Organized and coordinated various events and activities for faculty students.</li>
+              </ul>
+            </div><!-- Edn Resume Item -->
 
           </div>
 
@@ -579,7 +651,8 @@
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="bigproject-carousel" data-bigproject-carousel>
-          <button type="button" class="bigproject-nav bigproject-nav--prev" aria-label="โปรเจกต์ก่อนหน้า" data-bigproject-prev>
+          <button type="button" class="bigproject-nav bigproject-nav--prev" aria-label="โปรเจกต์ก่อนหน้า"
+            data-bigproject-prev>
             <i class="bi bi-chevron-left" aria-hidden="true"></i>
           </button>
 
@@ -592,7 +665,9 @@
                   <div class="card-body bigproject-cardbody" data-bigproject-card>
                     <div class="bigproject-cardcontent" data-bigproject-content>
                       <h5 class="card-title">RedVeil</h5>
-                      <p class="card-text">Soul-like Action RPG – Developed using Unity, I took on the roles of Game Designer and Project Manager. This project was inspired by Dark Souls and Elden Ring, focusing on challenging combat mechanics and a unique visual presentation.</p>
+                      <p class="card-text">Soul-like Action RPG – Developed using Unity, I took on the roles of Game
+                        Designer and Project Manager. This project was inspired by Dark Souls and Elden Ring, focusing
+                        on challenging combat mechanics and a unique visual presentation.</p>
 
                       <div class="mt-4 bigproject-cutoff" data-bigproject-cutoff>
                         <h6 class="fw-bold">Project Details:</h6>
@@ -609,20 +684,29 @@
                         <div class="mt-4">
                           <h6 class="fw-bold">Responsible:</h6>
                           <ul>
-                            <li><b>Combat & Mechanics Design:</b> Designed and balanced core gameplay mechanics and combat systems to ensure an engaging player experience.</li>
-                            <li><b>Level Architecture:</b> Architected level designs and layouts to optimize pacing, challenge scaling, and overall player progression.</li>
-                            <li><b>VFX Production:</b> Developed and implemented all in-game Visual Effects (VFX) to enhance combat feedback and visual fidelity.</li>
-                            <li><b>UX & User Flow:</b> Crafted intuitive User Experience (UX) and seamless user flows to improve menu navigation and accessibility.</li>
-                            <li><b>Project Direction:</b> Directed the overall game development lifecycle, maintaining the creative and technical vision from concept to completion.</li>
+                            <li><b>Combat & Mechanics Design:</b> Designed and balanced core gameplay mechanics and
+                              combat systems to ensure an engaging player experience.</li>
+                            <li><b>Level Architecture:</b> Architected level designs and layouts to optimize pacing,
+                              challenge scaling, and overall player progression.</li>
+                            <li><b>VFX Production:</b> Developed and implemented all in-game Visual Effects (VFX) to
+                              enhance combat feedback and visual fidelity.</li>
+                            <li><b>UX & User Flow:</b> Crafted intuitive User Experience (UX) and seamless user flows to
+                              improve menu navigation and accessibility.</li>
+                            <li><b>Project Direction:</b> Directed the overall game development lifecycle, maintaining
+                              the creative and technical vision from concept to completion.</li>
                           </ul>
                         </div>
 
                         <div class="mt-4">
                           <h6 class="fw-bold">Game Design Document:</h6>
                           <ul>
-                            <li><a href="https://www.figma.com/board/26Y4eHzP7011xaehhqSA2x/Gamedev-3_1?node-id=123-125&t=3q8WEd909XIT8ujj-1">WorkSpace</li>
-                              <li><a href="https://docs.google.com/document/d/1hkDyAhlrQ_xoQTj7k9H9Y62hX4kZVeG1PK95deFW3Jg/edit?tab=t.0#heading=h.j4msnknglbz">GameDesignDocument</li>
-                                <li><a href="https://canva.link/qt8k7u5ycg9d7u7">GameOverView</li>
+                            <li><a
+                                href="https://www.figma.com/board/26Y4eHzP7011xaehhqSA2x/Gamedev-3_1?node-id=123-125&t=3q8WEd909XIT8ujj-1">WorkSpace
+                            </li>
+                            <li><a
+                                href="https://docs.google.com/document/d/1hkDyAhlrQ_xoQTj7k9H9Y62hX4kZVeG1PK95deFW3Jg/edit?tab=t.0#heading=h.j4msnknglbz">GameDesignDocument
+                            </li>
+                            <li><a href="https://canva.link/qt8k7u5ycg9d7u7">GameOverView</li>
                           </ul>
                         </div>
 
@@ -646,17 +730,20 @@
                 </div>
               </article>
 
-              
+
               <article class="bigproject-slide">
                 <div class="card">
                   <img src="/assets/img/portfolio/Game3-9.png" class="card-img-top" alt="Blackest Night">
                   <div class="card-body bigproject-cardbody" data-bigproject-card>
                     <div class="bigproject-cardcontent" data-bigproject-content>
                       <h5 class="card-title">Blackest Night</h5>
-                      <p class="card-text">Fantasy Survival Mobile Game – Developed as a group project with friends, this game was designed for mobile platforms. I took on the role of Game Designer, responsible for designing the entire game system and balancing gameplay.
-                        The game features a day-night cycle, where players must gather resources during the day and fight or escape from demons at night, striving to survive as long as possible.
+                      <p class="card-text">Fantasy Survival Mobile Game – Developed as a group project with friends,
+                        this game was designed for mobile platforms. I took on the role of Game Designer, responsible
+                        for designing the entire game system and balancing gameplay.
+                        The game features a day-night cycle, where players must gather resources during the day and
+                        fight or escape from demons at night, striving to survive as long as possible.
 
-                        </p>
+                      </p>
 
                       <div class="mt-4 bigproject-cutoff" data-bigproject-cutoff>
                         <h6 class="fw-bold">Project Details:</h6>
@@ -684,14 +771,17 @@
                         <div class="mt-4">
                           <h6 class="fw-bold">Game Design Document:</h6>
                           <ul>
-                            <li><a href="https://docs.google.com/document/d/1E8cCXm2xQOTfTlyDGsjQ15PnJwslr3sZkwxG-3y5EVs/edit?usp=sharing">https://docs.google.com/document/d/1E8cCXm2xQOTfTlyDGsjQ15PnJwslr3sZkwxG-3y5EVs/edit?usp=sharing </a></li>
+                            <li><a
+                                href="https://docs.google.com/document/d/1E8cCXm2xQOTfTlyDGsjQ15PnJwslr3sZkwxG-3y5EVs/edit?usp=sharing">https://docs.google.com/document/d/1E8cCXm2xQOTfTlyDGsjQ15PnJwslr3sZkwxG-3y5EVs/edit?usp=sharing
+                              </a></li>
                           </ul>
                         </div>
 
                         <div class="mt-4">
                           <h6 class="fw-bold">Published:</h6>
                           <ul>
-                            <li><a href="https://cmu.to/BlackestNIght"> File APK of BlackestNIght: https://cmu.to/BlackestNIght </a></li>
+                            <li><a href="https://cmu.to/BlackestNIght"> File APK of BlackestNIght:
+                                https://cmu.to/BlackestNIght </a></li>
                             <li><a href="https://filllybui.itch.io/theblackest-night"> Itch.IO : BlackestNIght </a></li>
                           </ul>
                         </div>
@@ -714,7 +804,9 @@
                   <div class="card-body bigproject-cardbody" data-bigproject-card>
                     <div class="bigproject-cardcontent" data-bigproject-content>
                       <h5 class="card-title">Pakkapow M</h5>
-                      <p class="card-text">Mobile party game project inspired by Dokapon. I worked on game design, player flow, and balancing to keep each round short, fun, and competitive for casual players.</p>
+                      <p class="card-text">Mobile party game project inspired by Dokapon. I worked on game design,
+                        player flow, and balancing to keep each round short, fun, and competitive for casual players.
+                      </p>
 
                       <div class="mt-4 bigproject-cutoff" data-bigproject-cutoff>
                         <h6 class="fw-bold">Project Details:</h6>
@@ -742,7 +834,9 @@
                         <div class="mt-4">
                           <h6 class="fw-bold">Published:</h6>
                           <ul>
-                            <li><a href="https://play.google.com/store/apps/details?id=com.varisoft.pakapowmobile&hl=th"> Pakkapow Playstore </li>
+                            <li><a
+                                href="https://play.google.com/store/apps/details?id=com.varisoft.pakapowmobile&hl=th">
+                                Pakkapow Playstore </li>
                           </ul>
                         </div>
 
@@ -764,7 +858,9 @@
                   <div class="card-body bigproject-cardbody" data-bigproject-card>
                     <div class="bigproject-cardcontent" data-bigproject-content>
                       <h5 class="card-title">World Runner</h5>
-                      <p class="card-text">Action runner game for mobile platform with a focus on responsive controls and replayability. I handled gameplay systems, level progression, and pacing to keep players engaged over multiple runs.</p>
+                      <p class="card-text">Action runner game for mobile platform with a focus on responsive controls
+                        and replayability. I handled gameplay systems, level progression, and pacing to keep players
+                        engaged over multiple runs.</p>
 
                       <div class="mt-4 bigproject-cutoff" data-bigproject-cutoff>
                         <h6 class="fw-bold">Project details:</h6>
@@ -782,10 +878,13 @@
                           <h6 class="fw-bold">Responsible:</h6>
                           <ul>
                             <li>Drafted 2D level layouts and structural designs using Figma.</li>
-                            <li>Designed level gimmicks, thematic concepts, and collaborated closely with Concept Artists.</li>
-                            <li>Built 3D level prototypes and whitebox environments using Unity ProBuilder for playtesting and guildline.</li>
+                            <li>Designed level gimmicks, thematic concepts, and collaborated closely with Concept
+                              Artists.</li>
+                            <li>Built 3D level prototypes and whitebox environments using Unity ProBuilder for
+                              playtesting and guildline.</li>
                             <li>Defined dimensions, scale, and modular forms for environmental map assets.</li>
-                            <li>Designed map obstacles and documented gameplay mechanics for Art and Programming teams.</li>
+                            <li>Designed map obstacles and documented gameplay mechanics for Art and Programming teams.
+                            </li>
                           </ul>
                         </div>
 
@@ -793,7 +892,8 @@
                           <h6 class="fw-bold">Published:</h6>
                           <ul>
                             <li>Still in Development process</li>
-                            <li><a href="https://www.facebook.com/worgb/?locale=th_TH">Fanpage: https://www.facebook.com/worgb/?locale=th_TH</li>
+                            <li><a href="https://www.facebook.com/worgb/?locale=th_TH">Fanpage:
+                                https://www.facebook.com/worgb/?locale=th_TH</li>
                           </ul>
                         </div>
 
@@ -815,7 +915,9 @@
                   <div class="card-body bigproject-cardbody" data-bigproject-card>
                     <div class="bigproject-cardcontent" data-bigproject-content>
                       <h5 class="card-title">Don't press S</h5>
-                      <p class="card-text">Fast-paced jam project where players survive chaos with simple controls and quick decision-making. I focused on core game loop design, balancing challenge, and polishing the play experience for short sessions.</p>
+                      <p class="card-text">Fast-paced jam project where players survive chaos with simple controls and
+                        quick decision-making. I focused on core game loop design, balancing challenge, and polishing
+                        the play experience for short sessions.</p>
 
                       <div class="mt-4 bigproject-cutoff" data-bigproject-cutoff>
                         <h6 class="fw-bold">Project Details:</h6>
@@ -843,7 +945,8 @@
                           <h6 class="fw-bold">Published:</h6>
                           <ul>
                             <li>2nd Reward Global Game Jam</li>
-                            <li><a href="https://mixerza101.itch.io/dont-press-s"> itch.io : https://mixerza101.itch.io/dont-press-s </li>
+                            <li><a href="https://mixerza101.itch.io/dont-press-s"> itch.io :
+                                https://mixerza101.itch.io/dont-press-s </li>
                           </ul>
                         </div>
 
@@ -865,7 +968,8 @@
                   <div class="card-body bigproject-cardbody" data-bigproject-card>
                     <div class="bigproject-cardcontent" data-bigproject-content>
                       <h5 class="card-title">Website Design Portal</h5>
-                      <p class="card-text">Design a website for a portal that allows users to create and manage their own websites.</p>
+                      <p class="card-text">Design a website for a portal that allows users to create and manage their
+                        own websites.</p>
 
                       <div class="mt-4 bigproject-cutoff" data-bigproject-cutoff>
                         <h6 class="fw-bold">Project Details:</h6>
@@ -893,8 +997,15 @@
                           <h6 class="fw-bold">Published:</h6>
                           <ul>
                             <li>Published in a private</li>
-                            <li><a href="https://www.figma.com/design/R6WL193RPjanTIX5jcjQ8c/PortalFlow?node-id=0-1&t=bp3ZxI2h8fX9y5jF-1" target="_blank" rel="noopener noreferrer">UX/UI design: https://www.figma.com/design</a></li>
-                            <li><a href="https://drive.google.com/file/d/13Pznggp8iBCCiddiRj_FELMuTyQq53-Y/view?usp=sharing" target="_blank" rel="noopener noreferrer">Manual Doc: https://drive.google.com/file/d/13Pznggp8iBCCiddiRj_FELMuTyQq53-Y/view?usp=sharing</a></li>
+                            <li><a
+                                href="https://www.figma.com/design/R6WL193RPjanTIX5jcjQ8c/PortalFlow?node-id=0-1&t=bp3ZxI2h8fX9y5jF-1"
+                                target="_blank" rel="noopener noreferrer">UX/UI design: https://www.figma.com/design</a>
+                            </li>
+                            <li><a
+                                href="https://drive.google.com/file/d/13Pznggp8iBCCiddiRj_FELMuTyQq53-Y/view?usp=sharing"
+                                target="_blank" rel="noopener noreferrer">Manual Doc:
+                                https://drive.google.com/file/d/13Pznggp8iBCCiddiRj_FELMuTyQq53-Y/view?usp=sharing</a>
+                            </li>
                           </ul>
                         </div>
 
@@ -913,12 +1024,13 @@
             </div>
           </div>
 
-          <button type="button" class="bigproject-nav bigproject-nav--next" aria-label="โปรเจกต์ถัดไป" data-bigproject-next>
+          <button type="button" class="bigproject-nav bigproject-nav--next" aria-label="โปรเจกต์ถัดไป"
+            data-bigproject-next>
             <i class="bi bi-chevron-right" aria-hidden="true"></i>
           </button>
         </div>
       </div>
-      
+
 
     </section><!-- /BigProject Section -->
 
@@ -952,8 +1064,10 @@
                 <div class="portfolio-info">
                   <h4>Don't press S</h4>
                   <p>2nd Rewand Golble Gamejam</p>
-                  <a href="assets/img/portfolio/app-1.png" title="Game 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-game1.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <a href="assets/img/portfolio/app-1.png" title="Game 1" data-gallery="portfolio-gallery-app"
+                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-game1.html" title="More Details" class="details-link"><i
+                      class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -964,8 +1078,11 @@
                 <div class="portfolio-info">
                   <h4>Mae Phosop Monopoly</h4>
                   <p>Princess Popo Boardgame</p>
-                  <a href="assets/img/portfolio/or1-2.png" title="Staff/Organizer 1" data-gallery="portfolio-gallery-Game" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-or1.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <a href="assets/img/portfolio/or1-2.png" title="Staff/Organizer 1"
+                    data-gallery="portfolio-gallery-Game" class="glightbox preview-link"><i
+                      class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-or1.html" title="More Details" class="details-link"><i
+                      class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -976,8 +1093,11 @@
                 <div class="portfolio-info">
                   <h4>Event Staff</h4>
                   <p>Event Staff for boardgame</p>
-                  <a href="assets/img/portfolio/or2-1.jpg" title="Staff/Organizer 2" data-gallery="portfolio-gallery-Staff" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-or2.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <a href="assets/img/portfolio/or2-1.jpg" title="Staff/Organizer 2"
+                    data-gallery="portfolio-gallery-Staff" class="glightbox preview-link"><i
+                      class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-or2.html" title="More Details" class="details-link"><i
+                      class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -988,8 +1108,10 @@
                 <div class="portfolio-info">
                   <h4>Pixel Art</h4>
                   <p>my pixel spire Art</p>
-                  <a href="assets/img/portfolio/art-2.gif" title="Art-1" data-gallery="portfolio-gallery-artBook" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-art1.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <a href="assets/img/portfolio/art-2.gif" title="Art-1" data-gallery="portfolio-gallery-artBook"
+                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-art1.html" title="More Details" class="details-link"><i
+                      class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -1000,20 +1122,25 @@
                 <div class="portfolio-info">
                   <h4>Raid</h4>
                   <p>Extraction RPG Game by using Monogame</p>
-                  <a href="assets/img/portfolio/game-2-1.png" title="Game 2" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-game2.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <a href="assets/img/portfolio/game-2-1.png" title="Game 2" data-gallery="portfolio-gallery-app"
+                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-game2.html" title="More Details" class="details-link"><i
+                      class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
-            
+
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-Reward">
               <div class="portfolio-content h-100">
                 <img src="assets/img/portfolio/game-1-6.jpg" class="img-fluid" alt="">
                 <div class="portfolio-info">
                   <h4>GameJam Reward</h4>
                   <p>GameJame 2023 2nd Place</p>
-                  <a href="assets/img/portfolio/game-1-6.jpg" title="Gamejam Reward" data-gallery="portfolio-gallery-Reward" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-game1.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <a href="assets/img/portfolio/game-1-6.jpg" title="Gamejam Reward"
+                    data-gallery="portfolio-gallery-Reward" class="glightbox preview-link"><i
+                      class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-game1.html" title="More Details" class="details-link"><i
+                      class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -1024,8 +1151,11 @@
                 <div class="portfolio-info">
                   <h4>K-Camt Korea Study Transfer Project</h4>
                   <p>study transfer with korea student in 2025</p>
-                  <a href="assets/img/portfolio/K-camt.jpg" title="Go study transfer" data-gallery="portfolio-gallery-Reward" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-re2.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <a href="assets/img/portfolio/K-camt.jpg" title="Go study transfer"
+                    data-gallery="portfolio-gallery-Reward" class="glightbox preview-link"><i
+                      class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-re2.html" title="More Details" class="details-link"><i
+                      class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -1036,8 +1166,10 @@
                 <div class="portfolio-info">
                   <h4>Photography</h4>
                   <p>Photography for CAMT Freshman 2567</p>
-                  <a href="assets/img/portfolio/pho-2.jpg" title="Photography" data-gallery="portfolio-gallery-Reward" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-pho.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <a href="assets/img/portfolio/pho-2.jpg" title="Photography" data-gallery="portfolio-gallery-Reward"
+                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-pho.html" title="More Details" class="details-link"><i
+                      class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -1048,8 +1180,10 @@
                 <div class="portfolio-info">
                   <h4>Blackest Night</h4>
                   <p>My Mobile game with survival game</p>
-                  <a href="assets/img/portfolio/app-3.png" title="Game 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-game3.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <a href="assets/img/portfolio/app-3.png" title="Game 3" data-gallery="portfolio-gallery-app"
+                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-game3.html" title="More Details" class="details-link"><i
+                      class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -1060,8 +1194,10 @@
                 <div class="portfolio-info">
                   <h4>Pakkapow M</h4>
                   <p>My Mobile game with survival game</p>
-                  <a href="assets/img/portfolio/Pakapow-M_1.jpg" title="Game 4" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-Pakkapow.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <a href="assets/img/portfolio/Pakapow-M_1.jpg" title="Game 4" data-gallery="portfolio-gallery-app"
+                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-Pakkapow.html" title="More Details" class="details-link"><i
+                      class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -1072,8 +1208,11 @@
                 <div class="portfolio-info">
                   <h4>Do you knoe da way</h4>
                   <p>Horror GameJam 2024</p>
-                  <a href="assets/img/portfolio/badsonic.png" title="Do you knoe da way" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="https://iamkathi.itch.io/do-you-know-da-way" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <a href="assets/img/portfolio/badsonic.png" title="Do you knoe da way"
+                    data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                      class="bi bi-zoom-in"></i></a>
+                  <a href="https://iamkathi.itch.io/do-you-know-da-way" title="More Details" class="details-link"><i
+                      class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -1084,8 +1223,10 @@
                 <div class="portfolio-info">
                   <h4>Pool69</h4>
                   <p>GamePool Playfulgame</p>
-                  <a href="assets/img/portfolio/Pool69_1.png" title="Pool69" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="https://filllybui.itch.io/69-gamepool" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <a href="assets/img/portfolio/Pool69_1.png" title="Pool69" data-gallery="portfolio-gallery-app"
+                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="https://filllybui.itch.io/69-gamepool" title="More Details" class="details-link"><i
+                      class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -1096,8 +1237,11 @@
                 <div class="portfolio-info">
                   <h4>Too Many Sweating</h4>
                   <p>Summer Game jam 2026</p>
-                  <a href="assets/img/portfolio/Sweating_1.png" title="Summer Game Jam 2026" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="https://filllybui.itch.io/toomanysweat" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <a href="assets/img/portfolio/Sweating_1.png" title="Summer Game Jam 2026"
+                    data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                      class="bi bi-zoom-in"></i></a>
+                  <a href="https://filllybui.itch.io/toomanysweat" title="More Details" class="details-link"><i
+                      class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -1108,8 +1252,11 @@
                 <div class="portfolio-info">
                   <h4>Event Organize Moive Staff</h4>
                   <p>Event Exibition Staff</p>
-                  <a href="assets/img/portfolio/Movie_2.JPG" title="Movie Night Organizer" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="https://drive.google.com/drive/folders/14UJ5PKScCpc4C1i97G6fRFfWfp4gXUOY?usp=sharing" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <a href="assets/img/portfolio/Movie_2.JPG" title="Movie Night Organizer"
+                    data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                      class="bi bi-zoom-in"></i></a>
+                  <a href="https://drive.google.com/drive/folders/14UJ5PKScCpc4C1i97G6fRFfWfp4gXUOY?usp=sharing"
+                    title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -1120,19 +1267,22 @@
                 <div class="portfolio-info">
                   <h4>World Runner</h4>
                   <p>Track Running Online Mobile game</p>
-                  <a href="assets/img/portfolio/WOR_1.png" title="World Runner" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-Wor.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <a href="assets/img/portfolio/WOR_1.png" title="World Runner" data-gallery="portfolio-gallery-app"
+                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-Wor.html" title="More Details" class="details-link"><i
+                      class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
-            
+
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-Reward">
               <div class="portfolio-content h-100">
                 <img src="assets/img/portfolio/ptt.jpg" class="img-fluid" alt="">
                 <div class="portfolio-info">
                   <h4>PTT AR Metaverse workshop</h4>
                   <p>PTT AR Metaverse workshop</p>
-                  <a href="assets/img/portfolio/ptt.jpg" title="PTT Ar Metaverse" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="assets/img/portfolio/ptt.jpg" title="PTT Ar Metaverse" data-gallery="portfolio-gallery-app"
+                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -1143,8 +1293,11 @@
                 <div class="portfolio-info">
                   <h4>Lanna Beast</h4>
                   <p>Board Game</p>
-                  <a href="assets/img/portfolio/Lanna_5.jpg" title="Lanna Beast BoardGame" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-lanna.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <a href="assets/img/portfolio/Lanna_5.jpg" title="Lanna Beast BoardGame"
+                    data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                      class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-lanna.html" title="More Details" class="details-link"><i
+                      class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -1155,7 +1308,8 @@
                 <div class="portfolio-info">
                   <h4>SMO CAMT66 [Digital]</h4>
                   <p>University faculty SMO [council]</p>
-                  <a href="assets/img/portfolio/Smo.png" title="Smo" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="assets/img/portfolio/Smo.png" title="Smo" data-gallery="portfolio-gallery-app"
+                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -1166,8 +1320,11 @@
                 <div class="portfolio-info">
                   <h4>Website Design Portal</h4>
                   <p>Design a website for a portal that allows users to create and manage their own websites.</p>
-                  <a href="assets/img/portfolio/portal.png" title="Website Design Portal" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="https://drive.google.com/file/d/13Pznggp8iBCCiddiRj_FELMuTyQq53-Y/view?usp=sharing" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <a href="assets/img/portfolio/portal.png" title="Website Design Portal"
+                    data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                      class="bi bi-zoom-in"></i></a>
+                  <a href="https://drive.google.com/file/d/13Pznggp8iBCCiddiRj_FELMuTyQq53-Y/view?usp=sharing"
+                    title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -1178,8 +1335,11 @@
                 <div class="portfolio-info">
                   <h4>RedVeil</h4>
                   <p>3D PC Soul-like</p>
-                  <a href="/assets/img/portfolio/RedVeil/Big_main.png" title="RedVeil" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-Redveil.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <a href="/assets/img/portfolio/RedVeil/Big_main.png" title="RedVeil"
+                    data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                      class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-Redveil.html" title="More Details" class="details-link"><i
+                      class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -1190,8 +1350,11 @@
                 <div class="portfolio-info">
                   <h4>Data Desing In Pakkapow M</h4>
                   <p>Data System Design</p>
-                  <a href="/assets/img/portfolio/PKP/Pakapow_ (2).png" title="System design" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-Pakkapow.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <a href="/assets/img/portfolio/PKP/Pakapow_ (2).png" title="System design"
+                    data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                      class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-Pakkapow.html" title="More Details" class="details-link"><i
+                      class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -1202,8 +1365,10 @@
                 <div class="portfolio-info">
                   <h4>Farm RPG</h4>
                   <p>UX/UI Design and Game Design</p>
-                  <a href="/assets/img/portfolio/farmRPG-2.png" title="FarmRPG" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-farmRPG.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <a href="/assets/img/portfolio/farmRPG-2.png" title="FarmRPG" data-gallery="portfolio-gallery-app"
+                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-farmRPG.html" title="More Details" class="details-link"><i
+                      class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -1214,8 +1379,10 @@
                 <div class="portfolio-info">
                   <h4>Shourt Caster E-Sport</h4>
                   <p>Shourt Caster in Rov E-Sport</p>
-                  <a href="assets/img/portfolio/or3-1.jpg" title="Organizer 3" data-gallery="portfolio-gallery-Staff" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-or3.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <a href="assets/img/portfolio/or3-1.jpg" title="Organizer 3" data-gallery="portfolio-gallery-Staff"
+                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-or3.html" title="More Details" class="details-link"><i
+                      class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -1226,8 +1393,10 @@
                 <div class="portfolio-info">
                   <h4>UX/UI Pactice</h4>
                   <p>My UX/UI Design</p>
-                  <a href="assets/img/portfolio/figmar_f1.png" title="UX/UI 1" data-gallery="portfolio-gallery-artBook" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-UXUI.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <a href="assets/img/portfolio/figmar_f1.png" title="UX/UI 1" data-gallery="portfolio-gallery-artBook"
+                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-UXUI.html" title="More Details" class="details-link"><i
+                      class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -1238,11 +1407,13 @@
                 <div class="portfolio-info">
                   <h4>Pixel Art Environments</h4>
                   <p>My pixel art Environments Game in Raid</p>
-                  <a href="assets/img/portfolio/art2-1.png" title="Art-3" data-gallery="portfolio-gallery-artBook" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-art2.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <a href="assets/img/portfolio/art2-1.png" title="Art-3" data-gallery="portfolio-gallery-artBook"
+                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-art2.html" title="More Details" class="details-link"><i
+                      class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
-            </div><!-- End Portfolio Item -->          
+            </div><!-- End Portfolio Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-Game">
               <div class="portfolio-content h-100">
@@ -1250,8 +1421,10 @@
                 <div class="portfolio-info">
                   <h4>VR Game</h4>
                   <p>Unreal Engine VR Game</p>
-                  <a href="assets/img/portfolio/VR_1.png" title="Art-3" data-gallery="portfolio-gallery-Game" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-VR.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <a href="assets/img/portfolio/VR_1.png" title="Art-3" data-gallery="portfolio-gallery-Game"
+                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-VR.html" title="More Details" class="details-link"><i
+                      class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -1262,8 +1435,10 @@
                 <div class="portfolio-info">
                   <h4>Quest Code</h4>
                   <p>Serious Game Design</p>
-                  <a href="assets/img/portfolio/Code Quest.png" title="Art-3" data-gallery="portfolio-gallery-Game" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-CodeQuest.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <a href="assets/img/portfolio/Code Quest.png" title="Art-3" data-gallery="portfolio-gallery-Game"
+                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-CodeQuest.html" title="More Details" class="details-link"><i
+                      class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -1274,8 +1449,10 @@
                 <div class="portfolio-info">
                   <h4>FarmRPG GDD</h4>
                   <p>Game Design Document</p>
-                  <a href="assets/img/portfolio/farmRPG-3.png" title="Art-3" data-gallery="portfolio-gallery-Game" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="https://docs.google.com/document/d/1eAlbqU_5Pm3J2aVq2jjsBW6W6AtKsfnBEHWagyL0jmo/edit?usp=sharing" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <a href="assets/img/portfolio/farmRPG-3.png" title="Art-3" data-gallery="portfolio-gallery-Game"
+                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="https://docs.google.com/document/d/1eAlbqU_5Pm3J2aVq2jjsBW6W6AtKsfnBEHWagyL0jmo/edit?usp=sharing"
+                    title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -1286,8 +1463,11 @@
                 <div class="portfolio-info">
                   <h4>ArcanaTales</h4>
                   <p>Game Design Document</p>
-                  <a href="assets/img/portfolio/TaleGDD-2.png" title="GDD ตอนเขียนเล่น" data-gallery="portfolio-gallery-Game" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="https://docs.google.com/document/d/1zEn6Csct-KSRLK7Kk2c6OsF2HPOJXiRPhOvazgZ45lk/edit?usp=sharing" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <a href="assets/img/portfolio/TaleGDD-2.png" title="GDD ตอนเขียนเล่น"
+                    data-gallery="portfolio-gallery-Game" class="glightbox preview-link"><i
+                      class="bi bi-zoom-in"></i></a>
+                  <a href="https://docs.google.com/document/d/1zEn6Csct-KSRLK7Kk2c6OsF2HPOJXiRPhOvazgZ45lk/edit?usp=sharing"
+                    title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -1298,8 +1478,10 @@
                 <div class="portfolio-info">
                   <h4>LannaBeast</h4>
                   <p>BoardGame Contest Award</p>
-                  <a href="assets/img/portfolio/Lanna.jpg" title="Art-3" data-gallery="portfolio-gallery-Reward" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-lanna.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <a href="assets/img/portfolio/Lanna.jpg" title="Art-3" data-gallery="portfolio-gallery-Reward"
+                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-lanna.html" title="More Details" class="details-link"><i
+                      class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -1310,8 +1492,10 @@
                 <div class="portfolio-info">
                   <h4>KanTok(ขันโตก)</h4>
                   <p>Photography and Staff Kantok Event</p>
-                  <a href="assets/img/portfolio/kan.JPG" title="Art-3" data-gallery="portfolio-gallery-Staff" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="https://drive.google.com/drive/folders/1w4ZvK9SxsRNlQuUXvc9O-KeSHWgBjZAs" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <a href="assets/img/portfolio/kan.JPG" title="Art-3" data-gallery="portfolio-gallery-Staff"
+                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="https://drive.google.com/drive/folders/1w4ZvK9SxsRNlQuUXvc9O-KeSHWgBjZAs"
+                    title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -1322,8 +1506,10 @@
                 <div class="portfolio-info">
                   <h4>CMU wing kun doi(วิ่งขึ้นดอย)Staff</h4>
                   <p>Organized event in facuty</p>
-                  <a href="assets/img/portfolio/Kundoi.jpg" title="Art-3" data-gallery="portfolio-gallery-Staff" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="https://drive.google.com/drive/folders/15MCZj0ba6HoYls8Q1kEAG1IOrJvu6490?usp=sharing" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <a href="assets/img/portfolio/Kundoi.jpg" title="Art-3" data-gallery="portfolio-gallery-Staff"
+                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="https://drive.google.com/drive/folders/15MCZj0ba6HoYls8Q1kEAG1IOrJvu6490?usp=sharing"
+                    title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -1334,7 +1520,8 @@
                 <div class="portfolio-info">
                   <h4>E-Gad</h4>
                   <p>CMU English Test Level</p>
-                  <a href="assets/img/portfolio/English.png" title="Art-3" data-gallery="portfolio-gallery-Reward" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="assets/img/portfolio/English.png" title="Art-3" data-gallery="portfolio-gallery-Reward"
+                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -1345,7 +1532,8 @@
                 <div class="portfolio-info">
                   <h4>Horror Game jam 2025</h4>
                   <p>Horror Game Jam Joined</p>
-                  <a href="assets/img/portfolio/Horrorjam_1.png" title="Art-3" data-gallery="portfolio-gallery-Reward" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="assets/img/portfolio/Horrorjam_1.png" title="Art-3" data-gallery="portfolio-gallery-Reward"
+                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -1356,7 +1544,8 @@
                 <div class="portfolio-info">
                   <h4>Summer Game jam 2026</h4>
                   <p>Summer Game Jam Joined</p>
-                  <a href="assets/img/portfolio/Summer-Jam.png" title="Art-3" data-gallery="portfolio-gallery-Reward" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="assets/img/portfolio/Summer-Jam.png" title="Art-3" data-gallery="portfolio-gallery-Reward"
+                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -1367,8 +1556,10 @@
                 <div class="portfolio-info">
                   <h4>UX/UI Design workshop</h4>
                   <p>UX/UI Workshop by ชัชนก ชัยคำวง</p>
-                  <a href="assets/img/portfolio/UI.jpg" title="Art-3" data-gallery="portfolio-gallery-Reward" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-UIwork.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <a href="assets/img/portfolio/UI.jpg" title="Art-3" data-gallery="portfolio-gallery-Reward"
+                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-UIwork.html" title="More Details" class="details-link"><i
+                      class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -1379,8 +1570,10 @@
                 <div class="portfolio-info">
                   <h4>Blackest Night GDD</h4>
                   <p></p>
-                  <a href="assets/img/portfolio/game3-8.png" title="Art-3" data-gallery="portfolio-gallery-artBook" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="https://docs.google.com/document/d/1E8cCXm2xQOTfTlyDGsjQ15PnJwslr3sZkwxG-3y5EVs/edit?tab=t.0" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <a href="assets/img/portfolio/game3-8.png" title="Art-3" data-gallery="portfolio-gallery-artBook"
+                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="https://docs.google.com/document/d/1E8cCXm2xQOTfTlyDGsjQ15PnJwslr3sZkwxG-3y5EVs/edit?tab=t.0"
+                    title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -1391,8 +1584,10 @@
                 <div class="portfolio-info">
                   <h4>Valorant CMU tournament Analysis Doc</h4>
                   <p>Valorant CMU tournament Analysis Document</p>
-                  <a href="assets/img/portfolio/E-sport.jpg" title="Art-3" data-gallery="portfolio-gallery-artBook" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="https://drive.google.com/file/d/1mUHvgt_ADe651AlLpeuWcS4CRr-aSj-l/view?usp=drive_link" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <a href="assets/img/portfolio/E-sport.jpg" title="Art-3" data-gallery="portfolio-gallery-artBook"
+                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="https://drive.google.com/file/d/1mUHvgt_ADe651AlLpeuWcS4CRr-aSj-l/view?usp=drive_link"
+                    title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -1445,8 +1640,8 @@
                 </div>
               </div><!-- End Info Item -->
 
-             
-      </div>
+
+            </div>
 
     </section><!-- /Contact Section -->
 
@@ -1456,7 +1651,8 @@
 
     <div class="container">
       <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">iPortfolio</strong> <span>Aphiwit Boonyakiat</span></p>
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">iPortfolio</strong> <span>Aphiwit Boonyakiat</span>
+        </p>
       </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
@@ -1470,7 +1666,8 @@
   </footer>
 
   <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <!-- Preloader -->
   <div id="preloader"></div>
@@ -1628,7 +1825,7 @@
   <div class="sakura-background" id="sakuraBackground"></div>
 
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
       const heading = document.querySelector('h2');
       heading.classList.add('fade-in');
     });
@@ -1644,95 +1841,95 @@
       petal.style.height = petal.style.width;
       petal.style.animationDuration = Math.random() * 5 + 5 + 's';
       petal.style.opacity = Math.random() * 0.5 + 0.5;
-      
+
       document.getElementById('sakuraBackground').appendChild(petal);
-      
+
       setTimeout(() => {
         petal.remove();
       }, 10000);
     }
-    
+
     setInterval(createPetal, 300);
   </script>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const letters = document.querySelectorAll('.letter');
-    letters.forEach((letter, index) => {
-      letter.style.animationDelay = `${index * 0.1}s`; // เพิ่มการหน่วงเวลา
-      letter.classList.add('fade-in');
-    });
-  });
-</script>
-
-<script>
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      e.preventDefault();
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth'
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const letters = document.querySelectorAll('.letter');
+      letters.forEach((letter, index) => {
+        letter.style.animationDelay = `${index * 0.1}s`; // เพิ่มการหน่วงเวลา
+        letter.classList.add('fade-in');
       });
     });
-  });
-</script>
+  </script>
 
-<script>
-  // Zoom-in + Fade-in เมื่อเลื่อนเข้าแต่ละ section
-  document.addEventListener('DOMContentLoaded', function () {
-    document.body.classList.add('zoomfade-enabled');
-
-    const sections = Array.from(document.querySelectorAll('main section.section'));
-    if (sections.length === 0) return;
-
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) entry.target.classList.add('is-inview');
-        else entry.target.classList.remove('is-inview');
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
       });
-    }, { threshold: 0.12, rootMargin: '0px 0px -18% 0px' });
-
-    sections.forEach((s) => io.observe(s));
-  });
-</script>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const heroBg = document.getElementById('heroBackgroundImage');
-    if (!heroBg) return;
-
-    // ตั้งค่ารูปพื้นหลัง Home ที่ต้องการให้วนลูป
-    const heroBackgrounds = [
-      'assets/img/MainProfile.png',
-      'assets/img/portfolio/game-1-1.jpg',     
-      'assets/img/portfolio/app-3.png',
-      'assets/img/portfolio/K-camt.jpg',
-    ];
-
-    // เวลาเปลี่ยนภาพ (มิลลิวินาที) ปรับได้ตามต้องการ
-    const loopIntervalMs = 7000;
-    let currentIndex = 0;
-
-    // preload รูปเพื่อให้เปลี่ยนภาพลื่นขึ้น
-    heroBackgrounds.forEach((src) => {
-      const img = new Image();
-      img.src = src;
     });
+  </script>
 
-    heroBg.style.transition = 'opacity 0.6s ease';
+  <script>
+    // Zoom-in + Fade-in เมื่อเลื่อนเข้าแต่ละ section
+    document.addEventListener('DOMContentLoaded', function () {
+      document.body.classList.add('zoomfade-enabled');
 
-    if (heroBackgrounds.length <= 1) return;
+      const sections = Array.from(document.querySelectorAll('main section.section'));
+      if (sections.length === 0) return;
 
-    window.setInterval(() => {
-      currentIndex = (currentIndex + 1) % heroBackgrounds.length;
-      heroBg.style.opacity = '0';
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) entry.target.classList.add('is-inview');
+          else entry.target.classList.remove('is-inview');
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -18% 0px' });
 
-      window.setTimeout(() => {
-        heroBg.src = heroBackgrounds[currentIndex];
-        heroBg.style.opacity = '1';
-      }, 300);
-    }, loopIntervalMs);
-  });
-</script>
+      sections.forEach((s) => io.observe(s));
+    });
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const heroBg = document.getElementById('heroBackgroundImage');
+      if (!heroBg) return;
+
+      // ตั้งค่ารูปพื้นหลัง Home ที่ต้องการให้วนลูป
+      const heroBackgrounds = [
+        'assets/img/MainProfile.png',
+        'assets/img/portfolio/game-1-1.jpg',
+        'assets/img/portfolio/app-3.png',
+        'assets/img/portfolio/K-camt.jpg',
+      ];
+
+      // เวลาเปลี่ยนภาพ (มิลลิวินาที) ปรับได้ตามต้องการ
+      const loopIntervalMs = 7000;
+      let currentIndex = 0;
+
+      // preload รูปเพื่อให้เปลี่ยนภาพลื่นขึ้น
+      heroBackgrounds.forEach((src) => {
+        const img = new Image();
+        img.src = src;
+      });
+
+      heroBg.style.transition = 'opacity 0.6s ease';
+
+      if (heroBackgrounds.length <= 1) return;
+
+      window.setInterval(() => {
+        currentIndex = (currentIndex + 1) % heroBackgrounds.length;
+        heroBg.style.opacity = '0';
+
+        window.setTimeout(() => {
+          heroBg.src = heroBackgrounds[currentIndex];
+          heroBg.style.opacity = '1';
+        }, 300);
+      }, loopIntervalMs);
+    });
+  </script>
 </body>
 
 </html>
